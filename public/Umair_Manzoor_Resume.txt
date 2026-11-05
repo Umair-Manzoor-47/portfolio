@@ -1,109 +1,135 @@
 ================================================================================
 UMAIR MANZOOR
-Systems & Software Engineer
+Software Engineer — Systems & Backend
 Lahore, Pakistan | +92 304 8849668 | umairmanzoor546@gmail.com
 GitHub: https://github.com/Umair-Manzoor-47
 LinkedIn: https://linkedin.com/in/umair-manzoor
 ================================================================================
 
-EXECUTIVE SUMMARY
-Systems & Software Engineer with 2+ years of production experience engineering
-high-concurrency client-server architectures, AWS cloud backends, and low-latency
-C++20 systems. Proven track record architecting cloud backend infrastructure for
-live mobile titles serving 50M+ users at GenITeam, shipping commercial releases
-on Steam as Main Code Engineer, and designing zero-allocation memory allocators
-and electronic trading matching engines from scratch.
-
---------------------------------------------------------------------------------
-CORE COMPETENCIES & TECHNICAL SKILLS
---------------------------------------------------------------------------------
-* Systems & Low-Latency:
-  C++20, Cache Locality (alignas), Lock-Free SPSC Queues, Custom Allocators
-  (Bump Arena, Scoped Stack with Markers, Intrusive Free-List Pool), PMR Buffers,
-  Data-Oriented Design (DOD), SIMD Vectorization, Hardware Prefetching.
-
-* Backend & Cloud Infrastructure:
-  AWS Services (Lambda, S3, CloudWatch, API Gateway), C#, RESTful APIs,
-  Asynchronous Networking, Client-Server Telemetry, High-Traffic Live-Ops.
-
-* Languages:
-  C++20, C#, Dart, C, Java, Python, Lua, SQL.
-
-* Tools & Toolchains:
-  Git, CMake, Docker, Linux, Doctest, GDB, Valgrind, Raylib, OpenGL 4.5,
-  Flutter / Melos Monorepos.
+SUMMARY
+Systems & Backend Engineer with 2+ years building production systems in C# and
+C++20, real-time applications, client-server architecture, and low-latency
+performance optimization. Shipping commercial releases and engineering
+sub-microsecond matching engines, custom memory allocators, and modular runtime
+engines from scratch.
 
 --------------------------------------------------------------------------------
 PROFESSIONAL EXPERIENCE
 --------------------------------------------------------------------------------
-ZnK / GenITeam | Lahore, Pakistan
 Software Engineer
+ZnK, GenIteam | Lahore, Pakistan
 01/2026 – Present
-* Architected and integrated AWS cloud services for the Scary Teacher Reels &
-  Short Drama platform, managing high-throughput video delivery pipelines, user
-  authentication, and distributed telemetry across 50M+ total downloads.
-* Served as Main Code Engineer for commercial release "Little King Unchained" on
-  Steam; designed decoupled state machines, core game execution loops, and
-  asynchronous input abstraction layers.
-* Profiled and eliminated heap allocations and draw calls on resource-constrained
-  Android devices, stabilizing frame delivery at a consistent 60 FPS and
-  preventing thermal throttling.
-* Deployed automated telemetry and performance monitoring pipelines across
-  multi-million installation live environments.
+* Architected and integrated AWS cloud infrastructure (S3, CloudFront) for short
+  video media streaming and telemetry across live services serving 10M+ combined
+  downloads.
+* Profiled and eliminated runtime heap allocations and GC churn in core C#
+  execution loops, stabilizing frame delivery at a constant 60 FPS on
+  resource-constrained Android devices.
+* Deployed automated telemetry pipelines and client-server synchronization
+  protocols, maintaining uninterrupted service availability and reducing
+  runtime error rates during multi-million user live-ops events.
 
-EnsembleUI | New York, USA (Remote)
-Software Engineer
+Jr. Software Engineer (remote)
+EnsembleUI | New York, USA
 01/2025 – 12/2025
-* Contributed to open-source declarative mobile framework in Flutter/Dart,
-  optimizing core widget rendering pipelines by ~2% through fine-grained draw call
-  batching and render tree caching.
-* Authored production-ready template architectures and asynchronous data-loading
-  patterns adopted by third-party mobile developers globally.
-* Maintained modular package architecture across auth, storage, and networking
-  within a Melos monorepo.
+* Optimized core declarative client runtime pipelines in Flutter/Dart, reducing
+  draw-call overhead via fine-grained render caching and asynchronous backend-to-widget
+  stream loading.
+* Authored modular reference architectures adopted by 100+ external mobile
+  developers; established standardized client-server state synchronization patterns.
+* Maintained modular package architecture across authentication, networking, and
+  local storage within a Melos monorepo, accelerating multi-platform build and
+  integration cycles.
 
-UET Game Studio | Lahore, Pakistan
 Software Engineer Intern
+UET Game Studio | Lahore, Pakistan
 09/2024 – 12/2024
-* Engineered real-time simulation interaction systems for medical education VR
-  software on mobile VR hardware.
-* Optimized mobile graphics memory budgets and shader draw calls, shipping 2
-  interactive titles with 10K+ installs.
+* Engineered low-latency interaction and physics synchronization systems for
+  medical simulation software operating under strict mobile hardware thermal and
+  memory budgets.
+* Optimized GPU draw call batching and vertex memory layouts, cutting draw calls
+  by 35% and shipping 2 production applications with 10K+ downloads on Google
+  Play and Amazon Store.
 
 --------------------------------------------------------------------------------
-SELECTED SYSTEMS PROJECTS
+PROJECTS
 --------------------------------------------------------------------------------
-Holt — Low-Latency HFT Electronic Matching Engine (C++20)
-GitHub: https://github.com/Umair-Manzoor-47/Holt
-* Designed an ultra-low latency matching engine using wait-free SPSC circular ring
-  buffers with alignas(128) cacheline isolation to strictly eliminate false
-  sharing between cores.
-* Implemented O(1) price-time priority levels with intrusive doubly linked lists,
-  64-bit fixed-point arithmetic, and monotonic PMR arena pools, guaranteeing zero
-  heap allocations on the critical trading path (p99.9 < 420ns).
+Otterus2D — Modular C++20 / OpenGL 4.5 Runtime Engine
+05/2026 – Present
+Technologies: C++20, OpenGL 4.5 Core, Dynamic Batching, Decoupled Static Libs,
+              Lua 5.3, EnTT
+* Architected a modular systems runtime and batch renderer from scratch in C++20
+  and OpenGL 4.5 Core, batching textured quads into shared dynamic vertex buffers
+  to minimize GPU draw calls.
+* Organized engine into isolated static libraries with explicit interface
+  boundaries (Renderer, Math, ECS, Audio); embedded Lua 5.3 via Sol3 for runtime
+  script execution without recompilation.
 
-Custom Memory Allocator Suite (C++20)
-GitHub: https://github.com/Umair-Manzoor-47/Mem-Allocator
-* Built a deterministic memory management suite featuring Linear Bump Arena (O(1)
-  allocation and instant bulk reset), LIFO Stack with hierarchical Marker
-  snapshots, and Intrusive Free-List Pool with 0% external fragmentation.
-* Created an interactive Raylib visualizer and validated with a 100% passing
-  Doctest suite covering byte alignment edge cases.
+Ensemble — Declarative Cross-Platform Client Runtime
+2025
+Technologies: Flutter / Dart, Declarative AST Evaluation, Reactive State,
+              Melos Monorepo
+* Maintained client runtime subsystems that parse structured declarative YAML
+  configurations into native widget hierarchies with dynamic state synchronization
+  and render caching.
+* Introduced new features, widgets, authentication methods and integrated
+  accessibility requirements for apps built with platform.
 
-Archetype Entity Component System (C++20)
-GitHub: https://github.com/Umair-Manzoor-47/ECS
-* Handcrafted a data-oriented archetype ECS storing components in parallel
-  contiguous columns to maximize CPU L1/L2 cache prefetching.
-* Implemented O(1) swap-and-pop entity deletions and variadic template queries
-  with compile-time type IDs.
+Holt — Low-Latency HFT Electronic Matching Engine
+01/2026 – Present
+Technologies: C++20, Lock-Free SPSC, Memory Pool, Monotonic PMR, Linux
+* Engineered a deterministic HFT matching engine achieving 1.48M matches/sec with
+  sub-420ns p99.9 latency, compiled with -fno-exceptions and CPU core-pinning.
+* Implemented wait-free SPSC circular ring buffers with alignas(128) padding
+  between atomic cursors; structured price levels with monotonic PMR arena pools
+  for zero heap allocations.
+
+Custom Memory Allocator Suite
+2026
+Technologies: C++20, Linear Bump Arena, LIFO Stack, Intrusive Free-List Pool,
+              Doctest, Raylib
+* Built a deterministic memory management suite featuring Linear Bump Arenas
+  (O(1) allocation), LIFO Stacks with Marker snapshots, and Intrusive Free-List
+  Pools with 0% external fragmentation.
+* Engineered an STL-compliant TrackingAllocator wrapper and validated zero-leak
+  invariants across 100% passing Doctest unit tests and an interactive Raylib
+  visualizer.
+
+Archetype Entity Component System Runtime
+2026
+Technologies: C++20, Data-Oriented Design, Type Erasure, Variadic Templates
+* Handcrafted a data-oriented archetype ECS storing components in dense parallel
+  contiguous column arrays, saturating CPU L1/L2 prefetchers and eliminating
+  pointer indirection.
+* Achieved O(1) entity deletions via swap-and-pop buffer relocation, and designed
+  variadic template query iterators utilizing compile-time component IDs and
+  bitset filtering.
+
+Little King Unchained — Commercial Systems Architecture
+2026
+Technologies: C#, State Machines, Execution Loops, GC Elimination,
+              Steam PC Release
+* Served as Main Code Engineer for commercial release on Steam; engineered
+  decoupled hierarchical state machines, fixed-timestep execution loops, and
+  asynchronous input abstraction layers.
+* Profiled and eliminated runtime heap allocations to prevent garbage collector
+  hitches, maintaining consistent 60 FPS delivery across varied PC hardware.
 
 --------------------------------------------------------------------------------
 EDUCATION
 --------------------------------------------------------------------------------
-University of Engineering & Technology (UET) | Lahore, Pakistan
-Bachelor of Science in Computer Science
+BS Computer Science
+University of Engineering & Technology, Lahore | Lahore, Pakistan
 10/2020 – 10/2024
-Core Coursework: Operating Systems, Computer Architecture, Data Structures &
-Algorithms, Distributed Systems, Computer Networks, Database Systems, Software
-Design & Architecture.
+Relevant Coursework: Operating Systems, Computer Architecture, Distributed
+Systems, Data Structures & Algorithms, Computer Networks, Database Systems,
+Software Design & Architecture.
+
+--------------------------------------------------------------------------------
+SKILLS
+--------------------------------------------------------------------------------
+* Languages: C++, C#, Dart, Java, Lua, C, SQL
+* Systems & Architecture: Data-Oriented Design (ECS), Real-Time Systems,
+  Object-Oriented Design, Memory Allocators & Pooling, Performance Profiling
+* Backend & Tools: Git, CMake, Unity, AWS, Visual Studio, Raylib, OpenGL
 ================================================================================

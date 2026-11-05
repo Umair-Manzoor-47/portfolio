@@ -2,11 +2,11 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Umair Manzoor",
-    "label": "Systems & Software Engineer",
+    "label": "Software Engineer — Systems & Backend",
     "email": "umairmanzoor546@gmail.com",
     "phone": "+92 304 8849668",
     "url": "https://github.com/Umair-Manzoor-47",
-    "summary": "Systems & Software Engineer with 2+ years of production experience engineering high-concurrency client-server architectures, AWS cloud backends, and low-latency C++20 systems. Proven track record architecting backend infrastructure for 50M+ users at GenITeam, shipping commercial releases on Steam, and designing zero-allocation memory allocators and matching engines from scratch.",
+    "summary": "Systems & Backend Engineer with 2+ years building production systems in C# and C++20, real-time applications, client-server architecture, and low-latency performance optimization. Shipping commercial releases and engineering sub-microsecond matching engines, custom memory allocators, and modular runtime engines from scratch.",
     "location": {
       "city": "Lahore",
       "countryCode": "PK",
@@ -27,29 +27,30 @@
   },
   "work": [
     {
-      "name": "ZnK / GenITeam",
+      "name": "ZnK, GenIteam",
       "position": "Software Engineer",
       "url": "https://geniteam.com/",
       "startDate": "2026-01-01",
-      "summary": "Architecting high-scale client-server systems, AWS cloud backends, and core game architectures.",
+      "location": "Lahore, Pakistan",
+      "summary": "Engineering production features and AWS cloud backend infrastructure across live mobile titles.",
       "highlights": [
-        "Architected AWS cloud services for Scary Teacher short drama/reels platform handling high-throughput video delivery across 50M+ downloads.",
-        "Main Code Engineer for commercial Steam title 'Little King Unchained' (state machines, loop controllers, input pipelines).",
-        "Profiled and eliminated memory churn on Android devices, stabilizing frametimes at a consistent 60 FPS.",
-        "Deployed automated telemetry and live-ops performance pipelines."
+        "Architected and integrated AWS cloud infrastructure (S3, CloudFront) for short video media streaming and telemetry across live services serving 10M+ combined downloads.",
+        "Profiled and eliminated runtime heap allocations and GC churn in core C# execution loops, stabilizing frame delivery at a constant 60 FPS on resource-constrained Android devices.",
+        "Deployed automated telemetry pipelines and client-server synchronization protocols, maintaining uninterrupted service availability and reducing runtime error rates during multi-million user live-ops events."
       ]
     },
     {
       "name": "EnsembleUI",
-      "position": "Software Engineer (Remote)",
+      "position": "Jr. Software Engineer (remote)",
       "url": "https://ensembleui.com/",
       "startDate": "2025-01-01",
       "endDate": "2025-12-31",
-      "summary": "Contributed to declarative open-source cross-platform runtime in Flutter/Dart.",
+      "location": "New York, USA",
+      "summary": "Contributed to open-source declarative mobile client runtime in Flutter/Dart.",
       "highlights": [
-        "Optimized core widget rendering pipelines by ~2% via draw call batching and render caching.",
-        "Authored production-ready template architectures and asynchronous data-loading patterns.",
-        "Maintained modular package architecture across auth, storage, and networking in Melos monorepo."
+        "Optimized core declarative client runtime pipelines in Flutter/Dart, reducing draw-call overhead via fine-grained render caching and asynchronous backend-to-widget stream loading.",
+        "Authored modular reference architectures adopted by 100+ external mobile developers; established standardized client-server state synchronization patterns.",
+        "Maintained modular package architecture across authentication, networking, and local storage within a Melos monorepo, accelerating multi-platform build and integration cycles."
       ]
     },
     {
@@ -58,67 +59,168 @@
       "url": "https://uet.edu.pk/",
       "startDate": "2024-09-01",
       "endDate": "2024-12-31",
-      "summary": "Engineered real-time simulation interaction systems for medical education VR software on mobile VR hardware.",
+      "location": "Lahore, Pakistan",
+      "summary": "Engineered real-time interaction systems and simulation mechanics for mobile medical VR software.",
       "highlights": [
-        "Engineered real-time VR simulation systems for medical training.",
-        "Optimized mobile graphics budgets, shipping 2 interactive titles with 10K+ downloads."
+        "Engineered low-latency interaction and physics synchronization systems for medical simulation software operating under strict mobile hardware thermal and memory budgets.",
+        "Optimized GPU draw call batching and vertex memory layouts, cutting draw calls by 35% and shipping 2 production applications with 10K+ downloads on Google Play and Amazon Store."
       ]
     }
   ],
   "projects": [
     {
-      "name": "Holt",
-      "description": "Ultra-low latency electronic matching engine built in C++20 for deterministic sub-microsecond throughput using wait-free SPSC ring buffers and zero dynamic heap allocations on the hot path.",
+      "name": "Otterus2D — Modular C++20 / OpenGL 4.5 Runtime Engine",
+      "description": "Architected a modular systems runtime and batch renderer from scratch in C++20 and OpenGL 4.5 Core, batching textured quads into shared dynamic vertex buffers to minimize GPU draw calls. Organized engine into isolated static libraries with explicit interface boundaries (Renderer, Math, ECS, Audio); embedded Lua 5.3 via Sol3 for runtime script execution without recompilation.",
+      "startDate": "2026-05",
+      "url": "https://github.com/Umair-Manzoor-47/Otterus2D",
+      "keywords": [
+        "C++20",
+        "OpenGL 4.5 Core",
+        "Dynamic Batching",
+        "Decoupled Static Libs",
+        "Lua 5.3",
+        "EnTT"
+      ],
+      "highlights": [
+        "Architected a modular systems runtime and batch renderer from scratch in C++20 and OpenGL 4.5 Core, batching textured quads into shared dynamic vertex buffers to minimize GPU draw calls.",
+        "Organized engine into isolated static libraries with explicit interface boundaries (Renderer, Math, ECS, Audio); embedded Lua 5.3 via Sol3 for runtime script execution without recompilation."
+      ]
+    },
+    {
+      "name": "Ensemble — Declarative Cross-Platform Client Runtime",
+      "description": "Maintained client runtime subsystems that parse structured declarative YAML configurations into native widget hierarchies with dynamic state synchronization and render caching. Introduced new features, widgets, authentication methods and integrated accessibility requirements for apps built with platform.",
+      "startDate": "2025",
+      "endDate": "2025",
+      "url": "https://github.com/EnsembleUI/ensemble",
+      "keywords": [
+        "Flutter / Dart",
+        "Declarative AST Evaluation",
+        "Reactive State",
+        "Melos Monorepo"
+      ],
+      "highlights": [
+        "Maintained client runtime subsystems that parse structured declarative YAML configurations into native widget hierarchies with dynamic state synchronization and render caching.",
+        "Introduced new features, widgets, authentication methods and integrated accessibility requirements for apps built with platform."
+      ]
+    },
+    {
+      "name": "Holt — Low-Latency HFT Electronic Matching Engine",
+      "description": "Engineered a deterministic HFT matching engine achieving 1.48M matches/sec with sub-420ns p99.9 latency, compiled with -fno-exceptions and CPU core-pinning. Implemented wait-free SPSC circular ring buffers with alignas(128) padding between atomic cursors; structured price levels with monotonic PMR arena pools for zero heap allocations.",
+      "startDate": "2026-01",
       "url": "https://github.com/Umair-Manzoor-47/Holt",
-      "keywords": ["C++20", "HFT", "Lock-Free", "Low-Latency", "PMR"]
+      "keywords": [
+        "C++20",
+        "Lock-Free SPSC",
+        "Memory Pool",
+        "Monotonic PMR",
+        "Linux"
+      ],
+      "highlights": [
+        "Engineered a deterministic HFT matching engine achieving 1.48M matches/sec with sub-420ns p99.9 latency, compiled with -fno-exceptions and CPU core-pinning.",
+        "Implemented wait-free SPSC circular ring buffers with alignas(128) padding between atomic cursors; structured price levels with monotonic PMR arena pools for zero heap allocations."
+      ]
     },
     {
-      "name": "Mem-Allocator",
-      "description": "Deterministic custom memory allocator suite (Linear Bump, LIFO Stack with markers, Intrusive Free-List Pool) eliminating runtime heap fragmentation with Raylib visualizer and Doctest suite.",
+      "name": "Custom Memory Allocator Suite",
+      "description": "Built a deterministic memory management suite featuring Linear Bump Arenas (O(1) allocation), LIFO Stacks with Marker snapshots, and Intrusive Free-List Pools with 0% external fragmentation. Engineered an STL-compliant TrackingAllocator wrapper and validated zero-leak invariants across 100% passing Doctest unit tests and an interactive Raylib visualizer.",
+      "startDate": "2026",
+      "endDate": "2026",
       "url": "https://github.com/Umair-Manzoor-47/Mem-Allocator",
-      "keywords": ["C++20", "Memory Management", "Custom Allocators", "Raylib", "Doctest"]
+      "keywords": [
+        "C++20",
+        "Linear Bump Arena",
+        "LIFO Stack",
+        "Intrusive Free-List Pool",
+        "Doctest",
+        "Raylib"
+      ],
+      "highlights": [
+        "Built a deterministic memory management suite featuring Linear Bump Arenas (O(1) allocation), LIFO Stacks with Marker snapshots, and Intrusive Free-List Pools with 0% external fragmentation.",
+        "Engineered an STL-compliant TrackingAllocator wrapper and validated zero-leak invariants across 100% passing Doctest unit tests and an interactive Raylib visualizer."
+      ]
     },
     {
-      "name": "ECS",
-      "description": "Data-oriented archetype Entity Component System in C++20 with packed contiguous parallel column arrays and O(1) swap-and-pop entity deletions.",
+      "name": "Archetype Entity Component System Runtime",
+      "description": "Handcrafted a data-oriented archetype ECS storing components in dense parallel contiguous column arrays, saturating CPU L1/L2 prefetchers and eliminating pointer indirection. Achieved O(1) entity deletions via swap-and-pop buffer relocation, and designed variadic template query iterators utilizing compile-time component IDs and bitset filtering.",
+      "startDate": "2026",
+      "endDate": "2026",
       "url": "https://github.com/Umair-Manzoor-47/ECS",
-      "keywords": ["C++20", "Data-Oriented Design", "Type Erasure", "Variadic Templates"]
+      "keywords": [
+        "C++20",
+        "Data-Oriented Design",
+        "Type Erasure",
+        "Variadic Templates"
+      ],
+      "highlights": [
+        "Handcrafted a data-oriented archetype ECS storing components in dense parallel contiguous column arrays, saturating CPU L1/L2 prefetchers and eliminating pointer indirection.",
+        "Achieved O(1) entity deletions via swap-and-pop buffer relocation, and designed variadic template query iterators utilizing compile-time component IDs and bitset filtering."
+      ]
+    },
+    {
+      "name": "Little King Unchained — Commercial Systems Architecture",
+      "description": "Served as Main Code Engineer for commercial release on Steam; engineered decoupled hierarchical state machines, fixed-timestep execution loops, and asynchronous input abstraction layers. Profiled and eliminated runtime heap allocations to prevent garbage collector hitches, maintaining consistent 60 FPS delivery across varied PC hardware.",
+      "startDate": "2026",
+      "endDate": "2026",
+      "url": "https://store.steampowered.com/app/4681910/Little_King_Unchained/",
+      "keywords": [
+        "C#",
+        "State Machines",
+        "Execution Loops",
+        "GC Elimination",
+        "Steam PC Release"
+      ],
+      "highlights": [
+        "Served as Main Code Engineer for commercial release on Steam; engineered decoupled hierarchical state machines, fixed-timestep execution loops, and asynchronous input abstraction layers.",
+        "Profiled and eliminated runtime heap allocations to prevent garbage collector hitches, maintaining consistent 60 FPS delivery across varied PC hardware."
+      ]
     }
   ],
   "education": [
     {
-      "institution": "University of Engineering & Technology (UET)",
+      "institution": "University of Engineering & Technology, Lahore",
       "url": "https://uet.edu.pk/",
       "area": "Computer Science",
       "studyType": "Bachelor of Science",
       "startDate": "2020-10-01",
       "endDate": "2024-10-01",
+      "location": "Lahore, Pakistan",
       "courses": [
         "Operating Systems",
         "Computer Architecture",
-        "Data Structures & Algorithms",
         "Distributed Systems",
+        "Data Structures & Algorithms",
         "Computer Networks",
-        "Database Systems"
+        "Database Systems",
+        "Software Design & Architecture"
       ]
     }
   ],
   "skills": [
     {
-      "name": "Systems & Low-Latency",
-      "keywords": ["C++20", "Lock-Free SPSC", "Memory Pooling", "alignas Cache Alignment", "Data-Oriented Design", "SIMD"]
-    },
-    {
-      "name": "Backend & Cloud",
-      "keywords": ["AWS (Lambda, S3, CloudWatch)", "C#", "REST APIs", "High Concurrency", "Live-Ops Telemetry"]
-    },
-    {
       "name": "Languages",
-      "keywords": ["C++20", "C#", "Dart", "C", "Java", "Python", "Lua", "SQL"]
+      "keywords": ["C++", "C#", "Dart", "Java", "Lua", "C", "SQL"]
     },
     {
-      "name": "Tools & Runtimes",
-      "keywords": ["Git", "CMake", "Docker", "Linux", "GDB", "Raylib", "OpenGL 4.5", "Flutter / Melos"]
+      "name": "Systems & Architecture",
+      "keywords": [
+        "Data-Oriented Design (ECS)",
+        "Real-Time Systems",
+        "Object-Oriented Design",
+        "Memory Allocators & Pooling",
+        "Performance Profiling"
+      ]
+    },
+    {
+      "name": "Backend & Tools",
+      "keywords": [
+        "Git",
+        "CMake",
+        "Unity",
+        "AWS",
+        "Visual Studio",
+        "Raylib",
+        "OpenGL"
+      ]
     }
   ]
 }
