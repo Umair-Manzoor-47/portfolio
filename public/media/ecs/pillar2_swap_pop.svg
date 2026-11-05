@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%" style="background:#0F172A; font-family:'JetBrains Mono', Consolas, sans-serif;">
+  <rect width="600" height="400" fill="#0B132B" />
+  <rect x="20" y="20" width="560" height="360" rx="8" fill="#131C31" stroke="#253550" stroke-width="1.2" />
+  
+  <text x="40" y="55" fill="#38BDF8" font-size="14" font-weight="700">O(1) SWAP-AND-POP DELETION :: ZERO ARRAY SHIFTING</text>
+  <text x="40" y="75" fill="#64748B" font-size="11">Tail element swaps into destroyed slot; dense array remains packed</text>
+
+  <!-- Visual Array with Swap-and-Pop -->
+  <g transform="translate(40, 100)">
+    <rect x="0" y="0" width="520" height="85" rx="6" fill="#1E293B" stroke="#334155" />
+    
+    <!-- Slot 0 -->
+    <rect x="15" y="15" width="75" height="55" rx="4" fill="#0284C7" />
+    <text x="30" y="47" fill="#FFFFFF" font-size="11" font-weight="700">Ent #1</text>
+
+    <!-- Slot 1 (Destroyed) -->
+    <rect x="100" y="15" width="75" height="55" rx="4" fill="#E11D48" opacity="0.3" stroke="#F43F5E" stroke-width="1.5" />
+    <text x="110" y="42" fill="#FDA4AF" font-size="10" font-weight="700">DESTROY</text>
+    <text x="115" y="58" fill="#FFFFFF" font-size="9">Slot #2</text>
+
+    <!-- Slot 2 -->
+    <rect x="185" y="15" width="75" height="55" rx="4" fill="#0284C7" />
+    <text x="200" y="47" fill="#FFFFFF" font-size="11" font-weight="700">Ent #3</text>
+
+    <!-- Slot 3 (Tail) -->
+    <rect x="270" y="15" width="75" height="55" rx="4" fill="#059669" />
+    <text x="282" y="42" fill="#FFFFFF" font-size="10" font-weight="700">TAIL ENT</text>
+    <text x="285" y="58" fill="#A7F3D0" font-size="9">Slot #4</text>
+
+    <!-- Curved Arrow from Tail to Destroyed -->
+    <path d="M 307 15 C 307 -15, 137 -15, 137 15" fill="none" stroke="#FBBF24" stroke-width="2.5" />
+    <polygon points="132,12 142,12 137,18" fill="#FBBF24" />
+    <text x="180" y="-12" fill="#FBBF24" font-size="11" font-weight="700">SWAP &amp; POP</text>
+  </g>
+
+  <!-- Explanation -->
+  <g transform="translate(40, 205)">
+    <rect x="0" y="0" width="520" height="90" rx="6" fill="#0E1726" stroke="#1E2B40" stroke-width="1" />
+    <text x="15" y="25" fill="#94A3B8" font-size="11" font-weight="700">CONSTANT TIME DETERMINISM</text>
+    <text x="15" y="50" fill="#38BDF8" font-size="12" font-weight="700">Dense columns never leave holes or require O(N) memmove copies.</text>
+    <text x="15" y="70" fill="#64748B" font-size="11">Sparse index table in EntityRegistry updates the swapped entity in O(1).</text>
+  </g>
+
+  <!-- Bottom Metric Callout -->
+  <rect x="40" y="315" width="520" height="45" rx="4" fill="#0F172A" stroke="#334155" stroke-width="1" />
+  <text x="55" y="342" fill="#FBBF24" font-size="12" font-weight="700">O(1) CONSTANT TIME DELETIONS :: ZERO RUNTIME COMPACTION STALLS</text>
+</svg>

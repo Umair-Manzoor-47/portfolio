@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%" style="background:#0F172A; font-family:'JetBrains Mono', Consolas, sans-serif;">
+  <rect width="600" height="400" fill="#0B132B" />
+  <rect x="20" y="20" width="560" height="360" rx="8" fill="#131C31" stroke="#253550" stroke-width="1.2" />
+  
+  <text x="40" y="55" fill="#38BDF8" font-size="14" font-weight="700">VARIADIC QUERIES &amp; COMPILE-TIME TYPE IDS</text>
+  <text x="40" y="75" fill="#64748B" font-size="11">C++20 template meta-programming resolves component signatures at compile time</text>
+
+  <!-- Query Syntax Box -->
+  <g transform="translate(40, 100)">
+    <rect x="0" y="0" width="520" height="85" rx="6" fill="#0E1726" stroke="#1E2B40" stroke-width="1.2" />
+    <text x="15" y="28" fill="#F8FAFC" font-size="12" font-weight="700">world.each&lt;Position, Velocity&gt;([](auto&amp; pos, const auto&amp; vel) {</text>
+    <text x="35" y="52" fill="#34D399" font-size="12" font-weight="700">pos.x += vel.vx * dt;</text>
+    <text x="35" y="72" fill="#34D399" font-size="12" font-weight="700">pos.y += vel.vy * dt;</text>
+    <text x="15" y="80" fill="#F8FAFC" font-size="12" font-weight="700">});</text>
+  </g>
+
+  <!-- Archetype Matching Logic -->
+  <g transform="translate(40, 205)">
+    <rect x="0" y="0" width="520" height="90" rx="6" fill="#1E293B" stroke="#334155" />
+    <text x="15" y="25" fill="#94A3B8" font-size="11" font-weight="700">ZERO RUNTIME STRING HASHING</text>
+    <text x="15" y="50" fill="#6EE7B7" font-size="12" font-weight="700">ComponentID = get_id&lt;T&gt;(); // Sequential static counter</text>
+    <text x="15" y="70" fill="#64748B" font-size="11">Archetype matching runs via std::ranges::includes bitset checks at blazing speeds.</text>
+  </g>
+
+  <!-- Bottom Metric Callout -->
+  <rect x="40" y="315" width="520" height="45" rx="4" fill="#0F172A" stroke="#334155" stroke-width="1" />
+  <text x="55" y="342" fill="#38BDF8" font-size="12" font-weight="700">ZERO INDIRECTION QUERY ITERATION :: INLINED BY OPTIMIZER (-O3)</text>
+</svg>

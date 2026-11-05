@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%" style="background:#0F172A; font-family:'JetBrains Mono', Consolas, sans-serif;">
+  <rect width="600" height="400" fill="#0B132B" />
+  <rect x="20" y="20" width="560" height="360" rx="8" fill="#131C31" stroke="#253550" stroke-width="1.2" />
+  
+  <text x="40" y="55" fill="#38BDF8" font-size="14" font-weight="700">+2% RENDER PIPELINE OPTIMIZATION</text>
+  <text x="40" y="75" fill="#64748B" font-size="11">Reducing widget rebuild loops, draw calls, and layout recalculation passes</text>
+
+  <!-- Benchmark Comparison -->
+  <g transform="translate(40, 100)">
+    <rect x="0" y="0" width="520" height="85" rx="6" fill="#1E293B" />
+    <text x="15" y="25" fill="#94A3B8" font-size="11" font-weight="700">WIDGET RE-RENDER OVERHEAD REDUCTION</text>
+    
+    <!-- Before bar -->
+    <rect x="15" y="38" width="480" height="16" rx="3" fill="#64748B" opacity="0.4" />
+    <rect x="15" y="38" width="460" height="16" rx="3" fill="#F43F5E" />
+    <text x="480" y="51" fill="#FDA4AF" font-size="10">Baseline</text>
+
+    <!-- Optimized bar -->
+    <rect x="15" y="62" width="480" height="16" rx="3" fill="#64748B" opacity="0.4" />
+    <rect x="15" y="62" width="400" height="16" rx="3" fill="#10B981" />
+    <text x="425" y="75" fill="#6EE7B7" font-size="10" font-weight="700">+2% Faster</text>
+  </g>
+
+  <!-- Explanation -->
+  <g transform="translate(40, 205)">
+    <rect x="0" y="0" width="520" height="90" rx="6" fill="#0E1726" stroke="#1E2B40" stroke-width="1" />
+    <text x="15" y="25" fill="#94A3B8" font-size="11" font-weight="700">CACHE AWARE WIDGET BATCHING</text>
+    <text x="15" y="50" fill="#34D399" font-size="12" font-weight="700">Eliminated redundant dirty-element tree marks on async feed events.</text>
+    <text x="15" y="70" fill="#64748B" font-size="11">Enhanced smoothness and fluid scroll FPS across iOS and Android runtimes.</text>
+  </g>
+
+  <!-- Bottom Metric Callout -->
+  <rect x="40" y="315" width="520" height="45" rx="4" fill="#064E3B" stroke="#059669" stroke-width="1" />
+  <text x="55" y="342" fill="#6EE7B7" font-size="12" font-weight="700">SMOOTHER 60 FPS SCROLL RENDERING ACROSS COMPLEX VIEWS</text>
+</svg>

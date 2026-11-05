@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 480" width="920" height="480" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+    <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#6D28D9"/>
+    </linearGradient>
+    <linearGradient id="cardGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="920" height="480" rx="16" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2"/>
+
+  <!-- Top Title Bar -->
+  <rect x="24" y="24" width="872" height="64" rx="10" fill="url(#headerGrad)"/>
+  <text x="460" y="52" text-anchor="middle" fill="#F8FAFC" font-size="18" font-weight="700" letter-spacing="0.5">Archetype-Based Entity Component System (C++20)</text>
+  <text x="460" y="73" text-anchor="middle" fill="#94A3B8" font-size="12">Dense Memory Packing, Zero Pointer-Chasing, and Cache-Conscious System Queries</text>
+
+  <!-- 3 Architectural Columns -->
+  <!-- 1. Entity Registry & Signatures -->
+  <g transform="translate(24, 110)" filter="url(#shadow)">
+    <rect width="270" height="230" rx="10" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1.5"/>
+    <rect width="270" height="38" rx="10" fill="url(#cardGrad1)"/>
+    <rect y="28" width="270" height="10" fill="url(#cardGrad1)"/>
+    <text x="135" y="24" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700">1. Entity &amp; ID Registry</text>
+
+    <text x="16" y="64" fill="#0369A1" font-size="11" font-weight="700">METADATA MANAGEMENT</text>
+    <text x="16" y="86" fill="#334155" font-size="12">• Lightweight 32-bit Entity handle</text>
+    <text x="16" y="106" fill="#334155" font-size="12">• Compile-time ComponentID&lt;T&gt;</text>
+    <text x="16" y="126" fill="#334155" font-size="12">• Sorted signature hashing</text>
+    <text x="16" y="146" fill="#334155" font-size="12">• O(1) EntityRecord lookup</text>
+    <text x="16" y="166" fill="#334155" font-size="12">• Swap-and-pop row tracking</text>
+
+    <rect x="16" y="186" width="238" height="28" rx="6" fill="#F0F9FF"/>
+    <text x="135" y="204" text-anchor="middle" fill="#0284C7" font-size="11" font-weight="600">Zero Pointer Indirection</text>
+  </g>
+
+  <!-- 2. Archetype Parallel Columns -->
+  <g transform="translate(325, 110)" filter="url(#shadow)">
+    <rect width="270" height="230" rx="10" fill="#FFFFFF" stroke="#DDD6FE" stroke-width="1.5"/>
+    <rect width="270" height="38" rx="10" fill="url(#cardGrad2)"/>
+    <rect y="28" width="270" height="10" fill="url(#cardGrad2)"/>
+    <text x="135" y="24" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700">2. Packed Storage (Archetype)</text>
+
+    <text x="16" y="64" fill="#6D28D9" font-size="11" font-weight="700">DATA-ORIENTED STORAGE</text>
+    <text x="16" y="86" fill="#334155" font-size="12">• Packed parallel ComponentColumns</text>
+    <text x="16" y="106" fill="#334155" font-size="12">• Type-erased contiguous buffers</text>
+    <text x="16" y="126" fill="#334155" font-size="12">• Move semantics on reallocations</text>
+    <text x="16" y="146" fill="#334155" font-size="12">• Unordered O(1) swap-and-pop removal</text>
+    <text x="16" y="166" fill="#334155" font-size="12">• 100% dense contiguous memory</text>
+
+    <rect x="16" y="186" width="238" height="28" rx="6" fill="#F5F3FF"/>
+    <text x="135" y="204" text-anchor="middle" fill="#7C3AED" font-size="11" font-weight="600">Max L1/L2 Cache Hit Rate</text>
+  </g>
+
+  <!-- 3. Query Engine & Visual Demo -->
+  <g transform="translate(626, 110)" filter="url(#shadow)">
+    <rect width="270" height="230" rx="10" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="1.5"/>
+    <rect width="270" height="38" rx="10" fill="url(#cardGrad3)"/>
+    <rect y="28" width="270" height="10" fill="url(#cardGrad3)"/>
+    <text x="135" y="24" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700">3. Query &amp; Raylib Demo</text>
+
+    <text x="16" y="64" fill="#047857" font-size="11" font-weight="700">EXECUTION &amp; BENCHMARK</text>
+    <text x="16" y="86" fill="#334155" font-size="12">• Variadic Query&lt;Components...&gt;()</text>
+    <text x="16" y="106" fill="#334155" font-size="12">• std::ranges::includes filtering</text>
+    <text x="16" y="126" fill="#334155" font-size="12">• Linear vectorization traversal</text>
+    <text x="16" y="146" fill="#334155" font-size="12">• Interactive Raylib stress demo</text>
+    <text x="16" y="166" fill="#334155" font-size="12">• Microsecond per-system telemetry</text>
+
+    <rect x="16" y="186" width="238" height="28" rx="6" fill="#ECFDF5"/>
+    <text x="135" y="204" text-anchor="middle" fill="#059669" font-size="11" font-weight="600">Fast Iteration &amp; Telemetry</text>
+  </g>
+
+  <!-- Bottom Architecture Metrics Bar -->
+  <g transform="translate(24, 360)">
+    <rect width="872" height="96" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    
+    <g transform="translate(20, 16)">
+      <rect width="260" height="64" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="130" y="28" text-anchor="middle" fill="#0F172A" font-size="12" font-weight="700">Contiguous Parallel Arrays</text>
+      <text x="130" y="48" text-anchor="middle" fill="#64748B" font-size="11">Data stored by component, not by entity</text>
+    </g>
+
+    <g transform="translate(306, 16)">
+      <rect width="260" height="64" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="130" y="28" text-anchor="middle" fill="#0F172A" font-size="12" font-weight="700">O(1) Swap-and-Pop</text>
+      <text x="130" y="48" text-anchor="middle" fill="#64748B" font-size="11">Zero heap fragmentation on entity delete</text>
+    </g>
+
+    <g transform="translate(592, 16)">
+      <rect width="260" height="64" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="130" y="28" text-anchor="middle" fill="#0F172A" font-size="12" font-weight="700">Interactive Profiling Demo</text>
+      <text x="130" y="48" text-anchor="middle" fill="#64748B" font-size="11">Multi-archetype workload with Raylib</text>
+    </g>
+  </g>
+</svg>

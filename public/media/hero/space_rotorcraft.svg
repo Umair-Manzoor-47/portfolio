@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 280" fill="none" stroke="#253248" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Solar Panel on Top Mast -->
+  <polygon points="160,18 205,32 175,48 130,34" fill="none" stroke="#253248" stroke-width="1.3" />
+  <line x1="160" y1="18" x2="175" y2="48" stroke="#334155" stroke-dasharray="2 2" stroke-width="0.9" />
+  <line x1="145" y1="26" x2="190" y2="40" stroke="#334155" stroke-dasharray="2 2" stroke-width="0.9" />
+  <rect x="157" y="48" width="6" height="18" fill="none" />
+
+  <!-- Upper Rotor Hub & Counter-Rotating Blades -->
+  <ellipse cx="160" cy="66" rx="8" ry="3" />
+  <!-- Blade 1 (Left forward) -->
+  <path d="M 152 66 C 110 58, 60 52, 20 62 C 60 72, 110 70, 152 66 Z" fill="none" stroke-width="1.4" />
+  <line x1="20" y1="62" x2="152" y2="66" stroke="#475569" stroke-width="0.8" />
+  <!-- Blade 2 (Right rear) -->
+  <path d="M 168 66 C 210 62, 260 60, 300 50 C 260 42, 210 58, 168 66 Z" fill="none" stroke-width="1.4" />
+  <line x1="168" y1="66" x2="300" y2="50" stroke="#475569" stroke-width="0.8" />
+
+  <!-- Rotor Shaft / Swashplate -->
+  <line x1="158" y1="69" x2="158" y2="95" />
+  <line x1="162" y1="69" x2="162" y2="95" />
+  <ellipse cx="160" cy="82" rx="12" ry="4" fill="none" />
+  <line x1="148" y1="82" x2="154" y2="95" />
+  <line x1="172" y1="82" x2="166" y2="95" />
+
+  <!-- Lower Rotor Hub & Blades -->
+  <ellipse cx="160" cy="95" rx="8" ry="3" />
+  <!-- Lower Blade 1 (Right forward) -->
+  <path d="M 168 95 C 210 88, 255 86, 295 96 C 255 106, 210 100, 168 95 Z" fill="none" stroke-width="1.4" />
+  <line x1="168" y1="95" x2="295" y2="96" stroke="#475569" stroke-width="0.8" />
+  <!-- Lower Blade 2 (Left rear) -->
+  <path d="M 152 95 C 110 92, 65 90, 25 80 C 65 72, 110 88, 152 95 Z" fill="none" stroke-width="1.4" />
+  <line x1="25" y1="80" x2="152" y2="95" stroke="#475569" stroke-width="0.8" />
+
+  <!-- Main Avionics / Sensor Cube Chassis -->
+  <g transform="translate(0, 15)">
+    <!-- Top Face -->
+    <polygon points="160,95 205,110 160,125 115,110" fill="none" stroke-width="1.4" />
+    <!-- Left Face -->
+    <polygon points="115,110 160,125 160,175 115,160" fill="none" stroke-width="1.4" />
+    <!-- Right Face -->
+    <polygon points="160,125 205,110 205,160 160,175" fill="none" stroke-width="1.4" />
+    
+    <!-- Chassis Details & Sensors -->
+    <circle cx="138" cy="142" r="5" fill="none" />
+    <circle cx="138" cy="142" r="2" fill="#253248" />
+    <rect x="175" y="128" width="18" height="12" rx="1" fill="none" />
+    <line x1="175" y1="134" x2="193" y2="134" />
+    <!-- Downward navigation sensor -->
+    <ellipse cx="160" cy="175" rx="7" ry="3" />
+  </g>
+
+  <!-- 4 Articulated Landing Legs (Composite Stems & Footpads) -->
+  <!-- Leg Front Left -->
+  <path d="M 125 155 L 75 195 L 45 250" stroke-width="1.5" />
+  <line x1="75" y1="195" x2="90" y2="175" stroke-width="1" />
+  <circle cx="45" cy="250" r="4" fill="none" stroke-width="1.4" />
+
+  <!-- Leg Front Right -->
+  <path d="M 195 155 L 245 195 L 275 250" stroke-width="1.5" />
+  <line x1="245" y1="195" x2="230" y2="175" stroke-width="1" />
+  <circle cx="275" cy="250" r="4" fill="none" stroke-width="1.4" />
+
+  <!-- Leg Rear Left -->
+  <path d="M 130 135 L 90 155 L 70 215" stroke-width="1.3" />
+  <circle cx="70" cy="215" r="3.5" fill="none" />
+
+  <!-- Leg Rear Right -->
+  <path d="M 190 135 L 230 155 L 250 215" stroke-width="1.3" />
+  <circle cx="250" cy="215" r="3.5" fill="none" />
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%" style="background:#0F172A; font-family:'JetBrains Mono', Consolas, sans-serif;">
+  <rect width="600" height="400" fill="#0B132B" />
+  <rect x="20" y="20" width="560" height="360" rx="8" fill="#131C31" stroke="#253550" stroke-width="1.2" />
+  
+  <text x="40" y="55" fill="#38BDF8" font-size="14" font-weight="700">INTRUSIVE FREE-LIST POOL :: ZERO METADATA OVERHEAD</text>
+  <text x="40" y="75" fill="#64748B" font-size="11">Next pointers stored inside dormant blocks; zero external nodes</text>
+
+  <!-- Slots Grid -->
+  <g transform="translate(40, 100)">
+    <rect x="0" y="0" width="520" height="85" rx="6" fill="#1E293B" stroke="#334155" />
+    
+    <!-- Slot 0 Active -->
+    <rect x="15" y="15" width="80" height="55" rx="4" fill="#059669" />
+    <text x="25" y="47" fill="#FFFFFF" font-size="11" font-weight="700">ACTIVE</text>
+
+    <!-- Slot 1 Free (With Intrusive Pointer) -->
+    <rect x="110" y="15" width="80" height="55" rx="4" fill="#0B132B" stroke="#059669" stroke-width="1.5" />
+    <text x="120" y="40" fill="#34D399" font-size="10" font-weight="700">Node*</text>
+    <text x="120" y="55" fill="#64748B" font-size="9">next_free</text>
+
+    <!-- Arrow to next -->
+    <path d="M 195 42 L 295 42" stroke="#34D399" stroke-width="2" stroke-dasharray="3 3" />
+    <polygon points="295,38 303,42 295,46" fill="#34D399" />
+
+    <!-- Slot 2 Active -->
+    <rect x="205" y="15" width="80" height="55" rx="4" fill="#059669" />
+    <text x="215" y="47" fill="#FFFFFF" font-size="11" font-weight="700">ACTIVE</text>
+
+    <!-- Slot 3 Free -->
+    <rect x="305" y="15" width="80" height="55" rx="4" fill="#0B132B" stroke="#059669" stroke-width="1.5" />
+    <text x="315" y="40" fill="#34D399" font-size="10" font-weight="700">Node*</text>
+    <text x="315" y="55" fill="#64748B" font-size="9">next_free</text>
+
+    <!-- Slot 4 Active -->
+    <rect x="400" y="15" width="105" height="55" rx="4" fill="#059669" />
+    <text x="415" y="47" fill="#FFFFFF" font-size="11" font-weight="700">ACTIVE</text>
+  </g>
+
+  <!-- Explanation -->
+  <g transform="translate(40, 205)">
+    <rect x="0" y="0" width="520" height="90" rx="6" fill="#0E1726" stroke="#1E2B40" stroke-width="1" />
+    <text x="15" y="25" fill="#94A3B8" font-size="11" font-weight="700">CONSTANT O(1) REUSE &amp; 0% EXTERNAL FRAGMENTATION</text>
+    <text x="15" y="50" fill="#6EE7B7" font-size="12" font-weight="700">Chunk size = 32B | Alignment = 8B | Free-list pointer embeds in unused payload</text>
+    <text x="15" y="70" fill="#64748B" font-size="11">Eliminates allocator metadata overhead; 100% memory capacity is directly usable.</text>
+  </g>
+
+  <!-- Bottom Metric Callout -->
+  <rect x="40" y="315" width="520" height="45" rx="4" fill="#064E3B" stroke="#059669" stroke-width="1" />
+  <text x="55" y="342" fill="#6EE7B7" font-size="12" font-weight="700">ZERO METADATA HEAP WASTE :: 100% INTRUSIVE PAYLOAD PACKING</text>
+</svg>

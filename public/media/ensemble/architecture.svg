@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 480" width="920" height="480" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="ensHeaderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="ensCyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#0891B2"/>
+    </linearGradient>
+    <linearGradient id="ensIndigoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </linearGradient>
+    <linearGradient id="ensEmeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="ensShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="920" height="480" rx="16" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2"/>
+
+  <!-- Top Title Bar -->
+  <rect x="24" y="24" width="872" height="64" rx="10" fill="url(#ensHeaderGrad)"/>
+  <text x="460" y="52" text-anchor="middle" fill="#F8FAFC" font-size="18" font-weight="700" letter-spacing="0.5">EnsembleUI: Declarative Cross-Platform Framework</text>
+  <text x="460" y="73" text-anchor="middle" fill="#94A3B8" font-size="12">Open-Source Runtime Engine: DSL AST Evaluation, Reactive Binding &amp; Flutter Render Trees</text>
+
+  <!-- 3 Pipeline Columns -->
+  <!-- 1. Declarative DSL & Parser -->
+  <g transform="translate(24, 110)" filter="url(#ensShadow)">
+    <rect width="270" height="230" rx="10" fill="#FFFFFF" stroke="#A5F3FC" stroke-width="1.5"/>
+    <rect width="270" height="38" rx="10" fill="url(#ensCyanGrad)"/>
+    <rect y="28" width="270" height="10" fill="url(#ensCyanGrad)"/>
+    <text x="135" y="24" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700">1. Declarative DSL Parser</text>
+
+    <text x="16" y="64" fill="#0E7490" font-size="11" font-weight="700">AST COMPILER &amp; SCHEMA</text>
+    <text x="16" y="86" fill="#334155" font-size="12">• YAML / JSON schema validator</text>
+    <text x="16" y="106" fill="#334155" font-size="12">• Abstract Syntax Tree parsing</text>
+    <text x="16" y="126" fill="#334155" font-size="12">• Dynamic expression evaluation</text>
+    <text x="16" y="146" fill="#334155" font-size="12">• Script execution sandboxing</text>
+    <text x="16" y="166" fill="#334155" font-size="12">• Dynamic OTA schema updates</text>
+
+    <rect x="16" y="186" width="238" height="28" rx="6" fill="#ECFEFF"/>
+    <text x="135" y="204" text-anchor="middle" fill="#0891B2" font-size="11" font-weight="600">Zero App Store Rebuilds</text>
+  </g>
+
+  <!-- 2. Reactive State Engine -->
+  <g transform="translate(325, 110)" filter="url(#ensShadow)">
+    <rect width="270" height="230" rx="10" fill="#FFFFFF" stroke="#C7D2FE" stroke-width="1.5"/>
+    <rect width="270" height="38" rx="10" fill="url(#ensIndigoGrad)"/>
+    <rect y="28" width="270" height="10" fill="url(#ensIndigoGrad)"/>
+    <text x="135" y="24" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700">2. Reactive State Core</text>
+
+    <text x="16" y="64" fill="#4338CA" font-size="11" font-weight="700">DATA BINDING &amp; DISPATCH</text>
+    <text x="16" y="86" fill="#334155" font-size="12">• Observable state tree</text>
+    <text x="16" y="106" fill="#334155" font-size="12">• Two-way component binding</text>
+    <text x="16" y="126" fill="#334155" font-size="12">• Scoped variable interpolation</text>
+    <text x="16" y="146" fill="#334155" font-size="12">• Async API response hydration</text>
+    <text x="16" y="166" fill="#334155" font-size="12">• Action dispatcher pipelines</text>
+
+    <rect x="16" y="186" width="238" height="28" rx="6" fill="#EEF2FF"/>
+    <text x="135" y="204" text-anchor="middle" fill="#4F46E5" font-size="11" font-weight="600">Deterministic Reactive Graph</text>
+  </g>
+
+  <!-- 3. Widget Pipeline & Native Bridge -->
+  <g transform="translate(626, 110)" filter="url(#ensShadow)">
+    <rect width="270" height="230" rx="10" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="1.5"/>
+    <rect width="270" height="38" rx="10" fill="url(#ensEmeraldGrad)"/>
+    <rect y="28" width="270" height="10" fill="url(#ensEmeraldGrad)"/>
+    <text x="135" y="24" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700">3. Render Tree &amp; Bridge</text>
+
+    <text x="16" y="64" fill="#047857" font-size="11" font-weight="700">FLUTTER ENGINE / CHANNELS</text>
+    <text x="16" y="86" fill="#334155" font-size="12">• Modular Flutter widget factory</text>
+    <text x="16" y="106" fill="#334155" font-size="12">• Batched widget tree repainting</text>
+    <text x="16" y="126" fill="#334155" font-size="12">• Native iOS / Android channels</text>
+    <text x="16" y="146" fill="#334155" font-size="12">• Custom camera &amp; sensor plugins</text>
+    <text x="16" y="166" fill="#334155" font-size="12">• 6-month OSS contributor</text>
+
+    <rect x="16" y="186" width="238" height="28" rx="6" fill="#ECFDF5"/>
+    <text x="135" y="204" text-anchor="middle" fill="#059669" font-size="11" font-weight="600">60 FPS Native Performance</text>
+  </g>
+
+  <!-- Bottom Architecture Metrics Bar -->
+  <g transform="translate(24, 360)">
+    <rect width="872" height="96" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    
+    <g transform="translate(20, 16)">
+      <rect width="260" height="64" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="130" y="28" text-anchor="middle" fill="#0F172A" font-size="12" font-weight="700">Open-Source Engine</text>
+      <text x="130" y="48" text-anchor="middle" fill="#64748B" font-size="11">Active framework contributions &amp; PRs</text>
+    </g>
+
+    <g transform="translate(306, 16)">
+      <rect width="260" height="64" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="130" y="28" text-anchor="middle" fill="#0F172A" font-size="12" font-weight="700">Render Efficiency</text>
+      <text x="130" y="48" text-anchor="middle" fill="#64748B" font-size="11">Selective widget subtree re-evaluations</text>
+    </g>
+
+    <g transform="translate(592, 16)">
+      <rect width="260" height="64" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="130" y="28" text-anchor="middle" fill="#0F172A" font-size="12" font-weight="700">Dynamic UI Delivery</text>
+      <text x="130" y="48" text-anchor="middle" fill="#64748B" font-size="11">Server-driven screens with local execution</text>
+    </g>
+  </g>
+</svg>

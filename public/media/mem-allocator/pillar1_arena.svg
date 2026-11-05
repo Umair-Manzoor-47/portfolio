@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%" style="background:#0F172A; font-family:'JetBrains Mono', Consolas, sans-serif;">
+  <rect width="600" height="400" fill="#0B132B" />
+  <rect x="20" y="20" width="560" height="360" rx="8" fill="#131C31" stroke="#253550" stroke-width="1.2" />
+  
+  <text x="40" y="55" fill="#38BDF8" font-size="14" font-weight="700">LINEAR BUMP ARENA :: O(1) FORWARD POINTER</text>
+  <text x="40" y="75" fill="#64748B" font-size="11">std::align byte boundary enforcement + instant bulk reset</text>
+
+  <!-- Arena diagram -->
+  <g transform="translate(40, 100)">
+    <rect x="0" y="0" width="520" height="70" rx="6" fill="#1E293B" stroke="#334155" />
+    
+    <!-- Allocated block -->
+    <rect x="0" y="0" width="310" height="70" rx="6" fill="#0284C7" />
+    <text x="20" y="40" fill="#FFFFFF" font-size="14" font-weight="700">ALLOCATED BYTES (3,480 B)</text>
+
+    <!-- Bump pointer marker -->
+    <line x1="310" y1="0" x2="310" y2="70" stroke="#F59E0B" stroke-width="3" />
+    <polygon points="305,-8 315,-8 310,0" fill="#F59E0B" />
+    <text x="270" y="-14" fill="#FBBF24" font-size="11" font-weight="700">BUMP PTR</text>
+
+    <!-- Free space -->
+    <text x="340" y="40" fill="#64748B" font-size="12">UNALLOCATED CAPACITY (29,320 B)</text>
+  </g>
+
+  <!-- Explanation box -->
+  <g transform="translate(40, 200)">
+    <rect x="0" y="0" width="520" height="95" rx="6" fill="#0E1726" stroke="#1E2B40" stroke-width="1" />
+    <text x="15" y="25" fill="#94A3B8" font-size="11" font-weight="700">INSTANT BULK RESET</text>
+    <text x="15" y="50" fill="#34D399" font-size="12" font-weight="700">void reset() noexcept { offset_ = 0; } // 0 CPU DEALLOC OVERHEAD</text>
+    <text x="15" y="75" fill="#64748B" font-size="11">Ideal for per-frame or per-request workloads where all objects share lifetime.</text>
+  </g>
+
+  <!-- Bottom Metric Callout -->
+  <rect x="40" y="315" width="520" height="45" rx="4" fill="#0F172A" stroke="#334155" stroke-width="1" />
+  <text x="55" y="342" fill="#38BDF8" font-size="12" font-weight="700">O(1) ALLOCATION TIME :: ZERO LOCK CONTENTION OR SYS CALLS</text>
+</svg>

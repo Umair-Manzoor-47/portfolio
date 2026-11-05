@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Rounded Background Container -->
+  <rect width="64" height="64" rx="14" fill="#1D2B44" />
+  
+  <!-- Subtle Internal Circuit Boundary Line -->
+  <rect x="4" y="4" width="56" height="56" rx="10" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.25" stroke-dasharray="8 4" />
+  
+  <!-- Stylized Geometric "UM" Monogram -->
+  <!-- Letter U -->
+  <path d="M 16 19 L 16 35 C 16 42, 21 46, 28 46 C 35 46, 40 42, 40 35 L 40 19" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Letter M Overlap Node -->
+  <path d="M 28 46 L 28 32 L 36 41 L 44 32 L 44 46" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Active Hardware Node Dot -->
+  <circle cx="48" cy="20" r="3" fill="#34D399" />
+</svg>

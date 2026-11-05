@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%" style="background:#0F172A; font-family:'JetBrains Mono', Consolas, sans-serif;">
+  <rect width="600" height="400" fill="#0B132B" />
+  <rect x="20" y="20" width="560" height="360" rx="8" fill="#131C31" stroke="#253550" stroke-width="1.2" />
+  
+  <text x="40" y="55" fill="#38BDF8" font-size="14" font-weight="700">LIFO STACK ALLOCATOR :: SCOPED MARKER SNAPSHOTS</text>
+  <text x="40" y="75" fill="#64748B" font-size="11">free_to_marker(Marker) rewinds memory to exact previous checkpoint</text>
+
+  <!-- Stack Frames -->
+  <g transform="translate(40, 100)">
+    <rect x="0" y="0" width="520" height="70" rx="6" fill="#1E293B" stroke="#334155" />
+    
+    <!-- Base frame -->
+    <rect x="0" y="0" width="160" height="70" rx="6" fill="#4338CA" />
+    <text x="15" y="40" fill="#FFFFFF" font-size="12" font-weight="700">FRAME 0 [BASE]</text>
+
+    <!-- Marker 1 line -->
+    <line x1="160" y1="0" x2="160" y2="70" stroke="#F59E0B" stroke-width="2" />
+    <text x="135" y="-10" fill="#FBBF24" font-size="10" font-weight="700">MARKER 1</text>
+
+    <!-- Task Frame 1 -->
+    <rect x="160" y="0" width="180" height="70" fill="#6366F1" />
+    <text x="175" y="40" fill="#FFFFFF" font-size="12" font-weight="700">TASK WORKLOAD</text>
+
+    <!-- Marker 2 line -->
+    <line x1="340" y1="0" x2="340" y2="70" stroke="#EF4444" stroke-width="2" />
+    <text x="315" y="-10" fill="#F87171" font-size="10" font-weight="700">MARKER 2</text>
+
+    <!-- Free region -->
+    <text x="365" y="40" fill="#64748B" font-size="12">FREE BUFFER (31,480 B)</text>
+  </g>
+
+  <!-- Rewind Mechanism -->
+  <g transform="translate(40, 200)">
+    <rect x="0" y="0" width="520" height="95" rx="6" fill="#0E1726" stroke="#1E2B40" stroke-width="1" />
+    <text x="15" y="25" fill="#94A3B8" font-size="11" font-weight="700">HIERARCHICAL REWIND LOGIC</text>
+    <text x="15" y="50" fill="#38BDF8" font-size="12" font-weight="700">Marker mark = stack.get_marker();</text>
+    <text x="15" y="72" fill="#34D399" font-size="12" font-weight="700">stack.free_to_marker(mark); // Instant rollback, zero leaks</text>
+  </g>
+
+  <!-- Bottom Metric Callout -->
+  <rect x="40" y="315" width="520" height="45" rx="4" fill="#0F172A" stroke="#334155" stroke-width="1" />
+  <text x="55" y="342" fill="#A5B4FC" font-size="12" font-weight="700">PERFECT NESTED SCOPE LIFETIMES :: FASTEST POSSIBLE TRANSIENT ALLOC</text>
+</svg>

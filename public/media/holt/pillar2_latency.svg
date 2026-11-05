@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%" style="background:#0F172A; font-family:'JetBrains Mono', Consolas, sans-serif;">
+  <rect width="600" height="400" fill="#0B132B" />
+  <rect x="20" y="20" width="560" height="360" rx="8" fill="#131C31" stroke="#253550" stroke-width="1.2" />
+  
+  <text x="40" y="55" fill="#38BDF8" font-size="14" font-weight="700">SUB-MICROSECOND DETERMINISM :: NANOSECOND JITTER</text>
+  <text x="40" y="75" fill="#64748B" font-size="11">Elimination of OS thread context switching and lock contention</text>
+
+  <!-- Latency Comparison Chart -->
+  <g transform="translate(40, 105)">
+    <!-- Baseline Mutex Lock / Malloc (Red Curve with tail jitter) -->
+    <text x="0" y="15" fill="#F43F5E" font-size="11" font-weight="700">TRADITIONAL OS MUTEX / MALLOC (TAIL SPIKES > 15,000 ns)</text>
+    <rect x="0" y="25" width="520" height="45" rx="4" fill="#1E293B" />
+    <rect x="0" y="25" width="220" height="45" rx="4" fill="#BE123C" opacity="0.4" />
+    <rect x="220" y="25" width="300" height="45" rx="4" fill="#BE123C" opacity="0.15" />
+    <text x="15" y="52" fill="#FDA4AF" font-size="12" font-weight="700">p50 = 2,800 ns</text>
+    <text x="240" y="52" fill="#F43F5E" font-size="11" font-weight="700">p99.9 = 18,400 ns (HEAP + OS JITTER)</text>
+
+    <!-- Holt Lock-Free SPSC Engine (Cyan Curve) -->
+    <text x="0" y="115" fill="#38BDF8" font-size="11" font-weight="700">HOLT WAIT-FREE ENGINE (DETERMINISTIC &lt; 420 ns)</text>
+    <rect x="0" y="125" width="520" height="55" rx="4" fill="#1E293B" />
+    <rect x="0" y="125" width="85" height="55" rx="4" fill="#0284C7" opacity="0.8" />
+    <text x="15" y="158" fill="#FFFFFF" font-size="13" font-weight="800">185 ns</text>
+    <text x="95" y="158" fill="#38BDF8" font-size="11" font-weight="700">p99 = 310 ns  |  p99.9 = 415 ns (FLAT BOUND)</text>
+  </g>
+
+  <!-- Bottom Metric Callout -->
+  <rect x="40" y="315" width="520" height="45" rx="4" fill="#064E3B" stroke="#059669" stroke-width="1" />
+  <text x="55" y="342" fill="#6EE7B7" font-size="12" font-weight="700">100% DETERMINISTIC EXECUTION :: NO RUNTIME EXCEPTIONS (-fno-exceptions)</text>
+</svg>

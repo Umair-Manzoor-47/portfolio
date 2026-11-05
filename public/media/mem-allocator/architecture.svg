@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 460" width="920" height="460" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="linearGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+    <linearGradient id="stackGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#6D28D9"/>
+    </linearGradient>
+    <linearGradient id="poolGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="trackGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="920" height="460" rx="16" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2"/>
+
+  <!-- Top Title Bar -->
+  <rect x="24" y="24" width="872" height="64" rx="10" fill="url(#headerGrad)"/>
+  <text x="460" y="52" text-anchor="middle" fill="#F8FAFC" font-size="18" font-weight="700" letter-spacing="0.5">High-Performance Memory Allocator Suite (C++20)</text>
+  <text x="460" y="73" text-anchor="middle" fill="#94A3B8" font-size="12">Deterministic, Cache-Friendly Allocation Primitives with Real-Time Diagnostics</text>
+
+  <!-- 4 Strategy Cards -->
+  <!-- 1. Linear Allocator -->
+  <g transform="translate(24, 108)" filter="url(#shadow)">
+    <rect width="206" height="210" rx="10" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1.5"/>
+    <rect width="206" height="38" rx="10" fill="url(#linearGrad)"/>
+    <rect y="28" width="206" height="10" fill="url(#linearGrad)"/>
+    <text x="103" y="24" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700">Linear / Bump</text>
+    
+    <text x="16" y="62" fill="#0369A1" font-size="11" font-weight="700">MODEL: MONOTONIC ARENA</text>
+    <text x="16" y="84" fill="#334155" font-size="12">• Sequential pointer bump</text>
+    <text x="16" y="104" fill="#334155" font-size="12">• Strict byte alignment</text>
+    <text x="16" y="124" fill="#334155" font-size="12">• Zero per-object overhead</text>
+    <text x="16" y="144" fill="#334155" font-size="12">• Bulk instant reset</text>
+    <rect x="16" y="165" width="174" height="28" rx="6" fill="#F0F9FF"/>
+    <text x="103" y="183" text-anchor="middle" fill="#0284C7" font-size="11" font-weight="600">O(1) Alloc | Bulk Free</text>
+  </g>
+
+  <!-- 2. Stack Allocator -->
+  <g transform="translate(246, 108)" filter="url(#shadow)">
+    <rect width="206" height="210" rx="10" fill="#FFFFFF" stroke="#DDD6FE" stroke-width="1.5"/>
+    <rect width="206" height="38" rx="10" fill="url(#stackGrad)"/>
+    <rect y="28" width="206" height="10" fill="url(#stackGrad)"/>
+    <text x="103" y="24" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700">Stack Allocator</text>
+    
+    <text x="16" y="62" fill="#6D28D9" font-size="11" font-weight="700">MODEL: LIFO WITH MARKERS</text>
+    <text x="16" y="84" fill="#334155" font-size="12">• Scoped checkpoints</text>
+    <text x="16" y="104" fill="#334155" font-size="12">• Rewind to Marker</text>
+    <text x="16" y="124" fill="#334155" font-size="12">• Frame &amp; transient buffers</text>
+    <text x="16" y="144" fill="#334155" font-size="12">• High spatial locality</text>
+    <rect x="16" y="165" width="174" height="28" rx="6" fill="#F5F3FF"/>
+    <text x="103" y="183" text-anchor="middle" fill="#7C3AED" font-size="11" font-weight="600">O(1) Push | O(1) Rewind</text>
+  </g>
+
+  <!-- 3. Pool Allocator -->
+  <g transform="translate(468, 108)" filter="url(#shadow)">
+    <rect width="206" height="210" rx="10" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="1.5"/>
+    <rect width="206" height="38" rx="10" fill="url(#poolGrad)"/>
+    <rect y="28" width="206" height="10" fill="url(#poolGrad)"/>
+    <text x="103" y="24" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700">Pool Allocator</text>
+    
+    <text x="16" y="62" fill="#047857" font-size="11" font-weight="700">MODEL: UNIFORM CHUNKS</text>
+    <text x="16" y="84" fill="#334155" font-size="12">• Intrusive free-list</text>
+    <text x="16" y="104" fill="#334155" font-size="12">• Zero external metadata</text>
+    <text x="16" y="124" fill="#334155" font-size="12">• No fragmentation</text>
+    <text x="16" y="144" fill="#334155" font-size="12">• Bounds checking</text>
+    <rect x="16" y="165" width="174" height="28" rx="6" fill="#ECFDF5"/>
+    <text x="103" y="183" text-anchor="middle" fill="#059669" font-size="11" font-weight="600">O(1) Alloc | O(1) Free</text>
+  </g>
+
+  <!-- 4. Tracking Allocator -->
+  <g transform="translate(690, 108)" filter="url(#shadow)">
+    <rect width="206" height="210" rx="10" fill="#FFFFFF" stroke="#FDE68A" stroke-width="1.5"/>
+    <rect width="206" height="38" rx="10" fill="url(#trackGrad)"/>
+    <rect y="28" width="206" height="10" fill="url(#trackGrad)"/>
+    <text x="103" y="24" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700">Tracking &amp; STL</text>
+    
+    <text x="16" y="62" fill="#B45309" font-size="11" font-weight="700">MODEL: C++20 COMPLIANT</text>
+    <text x="16" y="84" fill="#334155" font-size="12">• std::vector / STL drop-in</text>
+    <text x="16" y="104" fill="#334155" font-size="12">• Real-time live bytes</text>
+    <text x="16" y="124" fill="#334155" font-size="12">• High-water peak metrics</text>
+    <text x="16" y="144" fill="#334155" font-size="12">• AllocatorStats telemetry</text>
+    <rect x="16" y="165" width="174" height="28" rx="6" fill="#FFFBEB"/>
+    <text x="103" y="183" text-anchor="middle" fill="#D97706" font-size="11" font-weight="600">STL Compatible | Telemetry</text>
+  </g>
+
+  <!-- Bottom Ecosystem Bar -->
+  <g transform="translate(24, 338)">
+    <rect width="872" height="98" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    
+    <g transform="translate(20, 18)">
+      <rect width="390" height="62" rx="8" fill="#F1F5F9"/>
+      <text x="195" y="28" text-anchor="middle" fill="#0F172A" font-size="13" font-weight="700">Interactive Raylib Visualizer</text>
+      <text x="195" y="48" text-anchor="middle" fill="#64748B" font-size="11">Live visual simulation of arena layouts, alignment offsets &amp; slot recycling</text>
+    </g>
+
+    <g transform="translate(462, 18)">
+      <rect width="390" height="62" rx="8" fill="#F1F5F9"/>
+      <text x="195" y="28" text-anchor="middle" fill="#0F172A" font-size="13" font-weight="700">Doctest Verification Harness</text>
+      <text x="195" y="48" text-anchor="middle" fill="#64748B" font-size="11">Automated unit test coverage verifying alignment, boundary checks &amp; RAII</text>
+    </g>
+  </g>
+</svg>

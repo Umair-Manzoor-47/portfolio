@@ -1,0 +1,124 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Umair Manzoor",
+    "label": "Systems & Software Engineer",
+    "email": "umairmanzoor546@gmail.com",
+    "phone": "+92 304 8849668",
+    "url": "https://github.com/Umair-Manzoor-47",
+    "summary": "Systems & Software Engineer with 2+ years of production experience engineering high-concurrency client-server architectures, AWS cloud backends, and low-latency C++20 systems. Proven track record architecting backend infrastructure for 50M+ users at GenITeam, shipping commercial releases on Steam, and designing zero-allocation memory allocators and matching engines from scratch.",
+    "location": {
+      "city": "Lahore",
+      "countryCode": "PK",
+      "region": "Punjab"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "Umair-Manzoor-47",
+        "url": "https://github.com/Umair-Manzoor-47"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "umair-manzoor",
+        "url": "https://linkedin.com/in/umair-manzoor"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "ZnK / GenITeam",
+      "position": "Software Engineer",
+      "url": "https://geniteam.com/",
+      "startDate": "2026-01-01",
+      "summary": "Architecting high-scale client-server systems, AWS cloud backends, and core game architectures.",
+      "highlights": [
+        "Architected AWS cloud services for Scary Teacher short drama/reels platform handling high-throughput video delivery across 50M+ downloads.",
+        "Main Code Engineer for commercial Steam title 'Little King Unchained' (state machines, loop controllers, input pipelines).",
+        "Profiled and eliminated memory churn on Android devices, stabilizing frametimes at a consistent 60 FPS.",
+        "Deployed automated telemetry and live-ops performance pipelines."
+      ]
+    },
+    {
+      "name": "EnsembleUI",
+      "position": "Software Engineer (Remote)",
+      "url": "https://ensembleui.com/",
+      "startDate": "2025-01-01",
+      "endDate": "2025-12-31",
+      "summary": "Contributed to declarative open-source cross-platform runtime in Flutter/Dart.",
+      "highlights": [
+        "Optimized core widget rendering pipelines by ~2% via draw call batching and render caching.",
+        "Authored production-ready template architectures and asynchronous data-loading patterns.",
+        "Maintained modular package architecture across auth, storage, and networking in Melos monorepo."
+      ]
+    },
+    {
+      "name": "UET Game Studio",
+      "position": "Software Engineer Intern",
+      "url": "https://uet.edu.pk/",
+      "startDate": "2024-09-01",
+      "endDate": "2024-12-31",
+      "summary": "Engineered real-time simulation interaction systems for medical education VR software on mobile VR hardware.",
+      "highlights": [
+        "Engineered real-time VR simulation systems for medical training.",
+        "Optimized mobile graphics budgets, shipping 2 interactive titles with 10K+ downloads."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Holt",
+      "description": "Ultra-low latency electronic matching engine built in C++20 for deterministic sub-microsecond throughput using wait-free SPSC ring buffers and zero dynamic heap allocations on the hot path.",
+      "url": "https://github.com/Umair-Manzoor-47/Holt",
+      "keywords": ["C++20", "HFT", "Lock-Free", "Low-Latency", "PMR"]
+    },
+    {
+      "name": "Mem-Allocator",
+      "description": "Deterministic custom memory allocator suite (Linear Bump, LIFO Stack with markers, Intrusive Free-List Pool) eliminating runtime heap fragmentation with Raylib visualizer and Doctest suite.",
+      "url": "https://github.com/Umair-Manzoor-47/Mem-Allocator",
+      "keywords": ["C++20", "Memory Management", "Custom Allocators", "Raylib", "Doctest"]
+    },
+    {
+      "name": "ECS",
+      "description": "Data-oriented archetype Entity Component System in C++20 with packed contiguous parallel column arrays and O(1) swap-and-pop entity deletions.",
+      "url": "https://github.com/Umair-Manzoor-47/ECS",
+      "keywords": ["C++20", "Data-Oriented Design", "Type Erasure", "Variadic Templates"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Engineering & Technology (UET)",
+      "url": "https://uet.edu.pk/",
+      "area": "Computer Science",
+      "studyType": "Bachelor of Science",
+      "startDate": "2020-10-01",
+      "endDate": "2024-10-01",
+      "courses": [
+        "Operating Systems",
+        "Computer Architecture",
+        "Data Structures & Algorithms",
+        "Distributed Systems",
+        "Computer Networks",
+        "Database Systems"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Systems & Low-Latency",
+      "keywords": ["C++20", "Lock-Free SPSC", "Memory Pooling", "alignas Cache Alignment", "Data-Oriented Design", "SIMD"]
+    },
+    {
+      "name": "Backend & Cloud",
+      "keywords": ["AWS (Lambda, S3, CloudWatch)", "C#", "REST APIs", "High Concurrency", "Live-Ops Telemetry"]
+    },
+    {
+      "name": "Languages",
+      "keywords": ["C++20", "C#", "Dart", "C", "Java", "Python", "Lua", "SQL"]
+    },
+    {
+      "name": "Tools & Runtimes",
+      "keywords": ["Git", "CMake", "Docker", "Linux", "GDB", "Raylib", "OpenGL 4.5", "Flutter / Melos"]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%" style="background:#0F172A; font-family:'JetBrains Mono', Consolas, sans-serif;">
+  <rect width="600" height="400" fill="#0B132B" />
+  <rect x="20" y="20" width="560" height="360" rx="8" fill="#131C31" stroke="#253550" stroke-width="1.2" />
+  
+  <text x="40" y="55" fill="#38BDF8" font-size="14" font-weight="700">WAIT-FREE SPSC RING BUFFER :: ZERO CONTENTION</text>
+  <text x="40" y="75" fill="#64748B" font-size="11">alignas(128) cacheline separation eliminates false sharing</text>
+
+  <!-- Cacheline Layout Visual -->
+  <g transform="translate(40, 95)">
+    <!-- Cacheline 0: Producer Head -->
+    <rect x="0" y="0" width="245" height="90" rx="6" fill="#1E293B" stroke="#0284C7" stroke-width="1.5" />
+    <text x="15" y="25" fill="#38BDF8" font-size="11" font-weight="700">CACHELINE 0 (PRODUCER)</text>
+    <text x="15" y="50" fill="#FFFFFF" font-size="16" font-weight="800">head_cursor_</text>
+    <text x="15" y="72" fill="#64748B" font-size="10">atomic&lt;uint64_t&gt; :: Core 1</text>
+
+    <!-- Cacheline Padding 64/128 Bytes -->
+    <rect x="255" y="0" width="10" height="90" fill="#090E1A" />
+
+    <!-- Cacheline 1: Consumer Tail -->
+    <rect x="275" y="0" width="245" height="90" rx="6" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5" />
+    <text x="290" y="25" fill="#FBBF24" font-size="11" font-weight="700">CACHELINE 1 (CONSUMER)</text>
+    <text x="290" y="50" fill="#FFFFFF" font-size="16" font-weight="800">tail_cursor_</text>
+    <text x="290" y="72" fill="#64748B" font-size="10">atomic&lt;uint64_t&gt; :: Core 2 (PINNED)</text>
+  </g>
+
+  <!-- Power-of-two bitwise wrap -->
+  <g transform="translate(40, 205)">
+    <rect x="0" y="0" width="520" height="90" rx="6" fill="#0E1726" stroke="#1E2B40" stroke-width="1" />
+    <text x="15" y="25" fill="#94A3B8" font-size="11" font-weight="700">POWER-OF-TWO RING MASKING (ZERO MODULO DIVISION)</text>
+    
+    <text x="15" y="55" fill="#A7F3D0" font-size="12" font-weight="700">index = cursor &amp; (RING_CAPACITY - 1); // 1 CPU CLOCK CYCLE</text>
+    <text x="15" y="75" fill="#64748B" font-size="10">Capacity: 65,536 slots | Power of 2 bitwise AND instead of costly CPU IDIV</text>
+  </g>
+
+  <!-- Bottom Metric Callout -->
+  <rect x="40" y="315" width="520" height="45" rx="4" fill="#0F172A" stroke="#334155" stroke-width="1" />
+  <text x="55" y="342" fill="#38BDF8" font-size="12" font-weight="700">1.48M ORDERS/SEC THROUGHPUT :: SINGLE CORE PINNED CONSUMER</text>
+</svg>

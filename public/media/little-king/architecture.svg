@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 480" width="920" height="480" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="lkHeaderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="lkPurpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#6D28D9"/>
+    </linearGradient>
+    <linearGradient id="lkBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="lkRoseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E11D48"/>
+      <stop offset="100%" stop-color="#BE123C"/>
+    </linearGradient>
+    <filter id="lkShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="920" height="480" rx="16" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2"/>
+
+  <!-- Top Title Bar -->
+  <rect x="24" y="24" width="872" height="64" rx="10" fill="url(#lkHeaderGrad)"/>
+  <text x="460" y="52" text-anchor="middle" fill="#F8FAFC" font-size="18" font-weight="700" letter-spacing="0.5">Little King Unchained: Commercial PC Systems (Steam)</text>
+  <text x="460" y="73" text-anchor="middle" fill="#94A3B8" font-size="12">Main Code Engineer: Core State Machines, GC Churn Elimination &amp; Steamworks Integration</text>
+
+  <!-- 3 Pipeline Columns -->
+  <!-- 1. Execution Loop & Input System -->
+  <g transform="translate(24, 110)" filter="url(#lkShadow)">
+    <rect width="270" height="230" rx="10" fill="#FFFFFF" stroke="#DDD6FE" stroke-width="1.5"/>
+    <rect width="270" height="38" rx="10" fill="url(#lkPurpleGrad)"/>
+    <rect y="28" width="270" height="10" fill="url(#lkPurpleGrad)"/>
+    <text x="135" y="24" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700">1. Core Loop &amp; Input</text>
+
+    <text x="16" y="64" fill="#6D28D9" font-size="11" font-weight="700">INPUT &amp; CONTROLLER ENGINE</text>
+    <text x="16" y="86" fill="#334155" font-size="12">• Fixed-timestep execution loop</text>
+    <text x="16" y="106" fill="#334155" font-size="12">• Asynchronous input buffering</text>
+    <text x="16" y="126" fill="#334155" font-size="12">• Gamepad &amp; keyboard abstraction</text>
+    <text x="16" y="146" fill="#334155" font-size="12">• Smooth motion interpolation</text>
+    <text x="16" y="166" fill="#334155" font-size="12">• Sub-frame input responsiveness</text>
+
+    <rect x="16" y="186" width="238" height="28" rx="6" fill="#F5F3FF"/>
+    <text x="135" y="204" text-anchor="middle" fill="#7C3AED" font-size="11" font-weight="600">Zero Input Latency</text>
+  </g>
+
+  <!-- 2. State Machine & Gameplay Runtime -->
+  <g transform="translate(325, 110)" filter="url(#lkShadow)">
+    <rect width="270" height="230" rx="10" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.5"/>
+    <rect width="270" height="38" rx="10" fill="url(#lkBlueGrad)"/>
+    <rect y="28" width="270" height="10" fill="url(#lkBlueGrad)"/>
+    <text x="135" y="24" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700">2. Hierarchical State Machine</text>
+
+    <text x="16" y="64" fill="#1D4ED8" font-size="11" font-weight="700">DECOUPLED LOGIC</text>
+    <text x="16" y="86" fill="#334155" font-size="12">• Explicit finite state machines</text>
+    <text x="16" y="106" fill="#334155" font-size="12">• Movement, combat &amp; boss phases</text>
+    <text x="16" y="126" fill="#334155" font-size="12">• Event-driven trigger architecture</text>
+    <text x="16" y="146" fill="#334155" font-size="12">• Predictable physics integration</text>
+    <text x="16" y="166" fill="#334155" font-size="12">• Modular ability components</text>
+
+    <rect x="16" y="186" width="238" height="28" rx="6" fill="#EFF6FF"/>
+    <text x="135" y="204" text-anchor="middle" fill="#2563EB" font-size="11" font-weight="600">Strict State Determinism</text>
+  </g>
+
+  <!-- 3. Memory Discipline & Steamworks -->
+  <g transform="translate(626, 110)" filter="url(#lkShadow)">
+    <rect width="270" height="230" rx="10" fill="#FFFFFF" stroke="#FECDD3" stroke-width="1.5"/>
+    <rect width="270" height="38" rx="10" fill="url(#lkRoseGrad)"/>
+    <rect y="28" width="270" height="10" fill="url(#lkRoseGrad)"/>
+    <text x="135" y="24" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700">3. Memory &amp; Steamworks</text>
+
+    <text x="16" y="64" fill="#BE123C" font-size="11" font-weight="700">STABILITY &amp; INTEGRATION</text>
+    <text x="16" y="86" fill="#334155" font-size="12">• Zero GC heap allocations in loop</text>
+    <text x="16" y="106" fill="#334155" font-size="12">• Pre-allocated object pools</text>
+    <text x="16" y="126" fill="#334155" font-size="12">• Dynamic asset loading / unloads</text>
+    <text x="16" y="146" fill="#334155" font-size="12">• Steamworks API &amp; cloud saves</text>
+    <text x="16" y="166" fill="#334155" font-size="12">• Shipped commercial release</text>
+
+    <rect x="16" y="186" width="238" height="28" rx="6" fill="#FFF1F2"/>
+    <text x="135" y="204" text-anchor="middle" fill="#E11D48" font-size="11" font-weight="600">Rock-Solid Frametime (144Hz)</text>
+  </g>
+
+  <!-- Bottom Architecture Metrics Bar -->
+  <g transform="translate(24, 360)">
+    <rect width="872" height="96" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    
+    <g transform="translate(20, 16)">
+      <rect width="260" height="64" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="130" y="28" text-anchor="middle" fill="#0F172A" font-size="12" font-weight="700">Full Commercial Cycle</text>
+      <text x="130" y="48" text-anchor="middle" fill="#64748B" font-size="11">Concept, architecture, build &amp; Steam launch</text>
+    </g>
+
+    <g transform="translate(306, 16)">
+      <rect width="260" height="64" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="130" y="28" text-anchor="middle" fill="#0F172A" font-size="12" font-weight="700">Frametime Consistency</text>
+      <text x="130" y="48" text-anchor="middle" fill="#64748B" font-size="11">Zero-churn pooling eliminates GC hitches</text>
+    </g>
+
+    <g transform="translate(592, 16)">
+      <rect width="260" height="64" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="130" y="28" text-anchor="middle" fill="#0F172A" font-size="12" font-weight="700">Hardware Abstraction</text>
+      <text x="130" y="48" text-anchor="middle" fill="#64748B" font-size="11">Full Steam deck, controller &amp; ultrawide support</text>
+    </g>
+  </g>
+</svg>

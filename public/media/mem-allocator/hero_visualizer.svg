@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="100%" height="100%" style="background:#0A0F1D; font-family:'JetBrains Mono', Consolas, sans-serif;">
+  <defs>
+    <linearGradient id="allocGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+    <linearGradient id="freeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#334155" />
+    </linearGradient>
+  </defs>
+
+  <!-- Window Header -->
+  <rect x="30" y="25" width="1140" height="50" rx="8" fill="#131F37" stroke="#233554" stroke-width="1.2" />
+  <circle cx="55" cy="50" r="6" fill="#EF4444" />
+  <circle cx="75" cy="50" r="6" fill="#F59E0B" />
+  <circle cx="95" cy="50" r="6" fill="#10B981" />
+  <text x="125" y="55" fill="#94A3B8" font-size="13" font-weight="600" letter-spacing="1">RAYLIB MEMORY VISUALIZER :: REAL-TIME HEAP ARENA INSPECTOR</text>
+
+  <rect x="920" y="38" width="230" height="24" rx="4" fill="#064E3B" />
+  <text x="935" y="54" fill="#34D399" font-size="11" font-weight="700">0% EXTERNAL FRAGMENTATION</text>
+
+  <!-- Left Main Memory Canvas: Block Array Map -->
+  <rect x="30" y="90" width="760" height="565" rx="10" fill="#0E1626" stroke="#1E2B42" stroke-width="1.2" />
+  <text x="55" y="125" fill="#F8FAFC" font-size="16" font-weight="700">64 KB BUFFER ARENA [0x7FFEE4B00000 - 0x7FFEE4B10000]</text>
+  <text x="55" y="145" fill="#64748B" font-size="11">Visualizing std::align byte boundaries, active allocations, and free-list slots</text>
+
+  <!-- Visualizer Grid of Slots (12 rows of 24 blocks) -->
+  <g transform="translate(55, 165)">
+    <!-- Active allocated chunks (Blue) -->
+    <rect x="0" y="0" width="350" height="40" rx="4" fill="url(#allocGrad)" />
+    <text x="15" y="25" fill="#FFFFFF" font-size="12" font-weight="700">LINEAR ARENA CHUNK (BUMP PTR = 0x015E)</text>
+    
+    <!-- Alignment Padding (Yellow) -->
+    <rect x="355" y="0" width="25" height="40" rx="2" fill="#D97706" />
+    <text x="360" y="25" fill="#FFFFFF" font-size="9" font-weight="700">ALIGN</text>
+
+    <!-- Stack Allocator region -->
+    <rect x="0" y="55" width="240" height="40" rx="4" fill="#6366F1" />
+    <text x="15" y="80" fill="#FFFFFF" font-size="12" font-weight="700">STACK TASK FRAME #1</text>
+    
+    <rect x="245" y="55" width="160" height="40" rx="4" fill="#818CF8" />
+    <text x="255" y="80" fill="#FFFFFF" font-size="12" font-weight="700">MARKER #2 (SNAPSHOT)</text>
+
+    <rect x="410" y="55" width="290" height="40" rx="4" fill="#1E293B" stroke="#334155" stroke-dasharray="3 3" />
+    <text x="440" y="80" fill="#64748B" font-size="11">FREE TO REWIND VIA free_to_marker()</text>
+
+    <!-- Intrusive Pool Chunks -->
+    <text x="0" y="125" fill="#94A3B8" font-size="12" font-weight="700">INTRUSIVE FREE-LIST FIXED POOL (32-BYTE OBJECT SLOTS)</text>
+    
+    <!-- 16 Pool Slots Row 1 -->
+    <g transform="translate(0, 140)">
+      <rect x="0" y="0" width="40" height="36" rx="3" fill="#059669" />
+      <rect x="44" y="0" width="40" height="36" rx="3" fill="#059669" />
+      <rect x="88" y="0" width="40" height="36" rx="3" fill="#1E293B" stroke="#059669" stroke-width="1.5" />
+      <text x="96" y="22" fill="#34D399" font-size="10">NEXT</text>
+      <rect x="132" y="0" width="40" height="36" rx="3" fill="#059669" />
+      <rect x="176" y="0" width="40" height="36" rx="3" fill="#059669" />
+      <rect x="220" y="0" width="40" height="36" rx="3" fill="#1E293B" stroke="#059669" stroke-width="1.5" />
+      <text x="228" y="22" fill="#34D399" font-size="10">NEXT</text>
+      <rect x="264" y="0" width="40" height="36" rx="3" fill="#059669" />
+      <rect x="308" y="0" width="40" height="36" rx="3" fill="#059669" />
+      <rect x="352" y="0" width="40" height="36" rx="3" fill="#059669" />
+      <rect x="396" y="0" width="40" height="36" rx="3" fill="#1E293B" stroke="#059669" stroke-width="1.5" />
+      <text x="404" y="22" fill="#34D399" font-size="10">NEXT</text>
+      <rect x="440" y="0" width="40" height="36" rx="3" fill="#059669" />
+      <rect x="484" y="0" width="40" height="36" rx="3" fill="#059669" />
+      <rect x="528" y="0" width="40" height="36" rx="3" fill="#059669" />
+      <rect x="572" y="0" width="40" height="36" rx="3" fill="#059669" />
+      <rect x="616" y="0" width="40" height="36" rx="3" fill="#059669" />
+      <rect x="660" y="0" width="40" height="36" rx="3" fill="#059669" />
+    </g>
+
+    <!-- Raw Memory Bytes Hex Inspector -->
+    <rect x="0" y="200" width="700" height="260" rx="6" fill="#080C16" stroke="#1B263B" stroke-width="1" />
+    <text x="15" y="225" fill="#38BDF8" font-size="12" font-weight="700">BUFFER DUMP [HEX VIEW]</text>
+    <text x="15" y="255" fill="#64748B" font-size="11">0x0000:  48 89 E5 48 83 EC 20 89 7D EC 48 89 75 E0 48 8B  H..H... .}.H.u.H.</text>
+    <text x="15" y="280" fill="#64748B" font-size="11">0x0010:  45 E0 48 8B 00 48 89 45 F8 48 8B 45 F8 48 83 C0  E.H..H.E.H.E.H..</text>
+    <text x="15" y="305" fill="#34D399" font-size="11">0x0020:  08 48 89 05 3B 2F 00 00 B8 00 00 00 00 48 83 C4  .H..;/.......H..</text>
+    <text x="15" y="330" fill="#38BDF8" font-size="11">0x0030:  20 5D C3 55 48 89 E5 48 83 EC 30 89 7D DC 48 89   ].UH..H..0.}.H.</text>
+    <text x="15" y="355" fill="#FBBF24" font-size="11">0x0040:  75 D0 48 89 55 C8 48 8B 45 D0 48 8B 00 48 89 45  u.H.U.H.E.H..H.E</text>
+    <text x="15" y="380" fill="#64748B" font-size="11">0x0050:  F0 48 8B 45 F0 48 8B 4D C8 48 89 08 48 8B 45 F0  .H.E.H.M.H..H.E.</text>
+    <text x="15" y="405" fill="#64748B" font-size="11">0x0060:  48 83 C0 08 48 89 05 07 2F 00 00 48 8B 45 F0 48  H...H.../..H.E.H</text>
+    <text x="15" y="430" fill="#64748B" font-size="11">0x0070:  83 C4 30 5D C3 90 90 90 90 90 90 90 90 90 90 90  ..0]............</text>
+  </g>
+
+  <!-- Right Panel: AllocatorStats & Diagnostic Counters -->
+  <rect x="810" y="90" width="360" height="565" rx="10" fill="#0E1626" stroke="#1E2B42" stroke-width="1.2" />
+  <text x="835" y="125" fill="#F8FAFC" font-size="16" font-weight="700">AllocatorStats TELEMETRY</text>
+  <text x="835" y="145" fill="#64748B" font-size="11">std::pmr / Custom allocator monitoring</text>
+
+  <!-- Stat 1 -->
+  <g transform="translate(835, 175)">
+    <rect x="0" y="0" width="310" height="75" rx="8" fill="#131F37" stroke="#253554" stroke-width="1" />
+    <text x="15" y="24" fill="#94A3B8" font-size="11" font-weight="600">ACTIVE HEAP BYTES</text>
+    <text x="15" y="54" fill="#38BDF8" font-size="22" font-weight="800">12,480 Bytes</text>
+    <text x="180" y="54" fill="#64748B" font-size="11">Peak: 16,384 B</text>
+  </g>
+
+  <!-- Stat 2 -->
+  <g transform="translate(835, 265)">
+    <rect x="0" y="0" width="310" height="75" rx="8" fill="#131F37" stroke="#253554" stroke-width="1" />
+    <text x="15" y="24" fill="#94A3B8" font-size="11" font-weight="600">ALLOCATION LATENCY</text>
+    <text x="15" y="54" fill="#34D399" font-size="22" font-weight="800">O(1) Constant</text>
+    <text x="180" y="54" fill="#64748B" font-size="11">~3-5 CPU cycles</text>
+  </g>
+
+  <!-- Stat 3 -->
+  <g transform="translate(835, 355)">
+    <rect x="0" y="0" width="310" height="75" rx="8" fill="#131F37" stroke="#253554" stroke-width="1" />
+    <text x="15" y="24" fill="#94A3B8" font-size="11" font-weight="600">EXTERNAL FRAGMENTATION</text>
+    <text x="15" y="54" fill="#10B981" font-size="22" font-weight="800">0.00%</text>
+    <text x="180" y="54" fill="#64748B" font-size="11">Fixed-size slots</text>
+  </g>
+
+  <!-- Stat 4 -->
+  <g transform="translate(835, 445)">
+    <rect x="0" y="0" width="310" height="185" rx="8" fill="#131F37" stroke="#253554" stroke-width="1" />
+    <text x="15" y="24" fill="#94A3B8" font-size="11" font-weight="600">DOCTEST SUITE STATUS</text>
+    <text x="15" y="54" fill="#34D399" font-size="18" font-weight="800">100% TESTS PASSING</text>
+    
+    <text x="15" y="85" fill="#E2E8F0" font-size="11">✓ Linear arena overflow check</text>
+    <text x="15" y="105" fill="#E2E8F0" font-size="11">✓ Stack marker rewind integrity</text>
+    <text x="15" y="125" fill="#E2E8F0" font-size="11">✓ Intrusive free-list chunk reuse</text>
+    <text x="15" y="145" fill="#E2E8F0" font-size="11">✓ TrackingAllocator STL wrapper</text>
+    <text x="15" y="165" fill="#38BDF8" font-size="11">✓ std::align boundary enforcement</text>
+  </g>
+</svg>

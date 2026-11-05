@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 220" fill="none" stroke="#334155" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Outer Silicon Die Package (Isometric Projection) -->
+  <polygon points="120,15 220,65 120,115 20,65" fill="none" stroke="#1E293B" stroke-width="1.6" />
+  <polygon points="20,65 120,115 120,130 20,80" fill="none" stroke="#1E293B" stroke-width="1.6" />
+  <polygon points="120,115 220,65 220,80 120,130" fill="none" stroke="#1E293B" stroke-width="1.6" />
+
+  <!-- Substrate Pin Grid Array Edge Contacts -->
+  <line x1="30" y1="72" x2="30" y2="78" stroke="#64748B" />
+  <line x1="45" y1="80" x2="45" y2="86" stroke="#64748B" />
+  <line x1="60" y1="87" x2="60" y2="93" stroke="#64748B" />
+  <line x1="75" y1="95" x2="75" y2="101" stroke="#64748B" />
+  <line x1="90" y1="102" x2="90" y2="108" stroke="#64748B" />
+  <line x1="105" y1="110" x2="105" y2="116" stroke="#64748B" />
+
+  <!-- Inner Die Floorplan -->
+  <polygon points="120,32 195,70 120,108 45,70" fill="none" stroke="#334155" stroke-width="1.4" />
+
+  <!-- Core 0 - Core 3 (Compute Quads) -->
+  <!-- Quad Left Upper -->
+  <polygon points="85,50 115,65 95,75 65,60" fill="none" stroke="#475569" stroke-width="1.1" />
+  <line x1="75" y1="55" x2="105" y2="70" stroke="#64748B" stroke-dasharray="2 2" stroke-width="0.8" />
+  <!-- Quad Right Upper -->
+  <polygon points="125,50 155,65 135,75 105,60" fill="none" stroke="#475569" stroke-width="1.1" />
+  
+  <!-- Quad Left Lower -->
+  <polygon points="95,75 125,90 105,100 75,85" fill="none" stroke="#475569" stroke-width="1.1" />
+  
+  <!-- Quad Right Lower -->
+  <polygon points="135,75 165,90 145,100 115,85" fill="none" stroke="#475569" stroke-width="1.1" />
+
+  <!-- Shared L3 Cache Central Mesh Ring -->
+  <polygon points="120,58 135,66 120,74 105,66" fill="none" stroke="#0284C7" stroke-width="1.4" />
+  <circle cx="120" cy="66" r="2.5" fill="#0284C7" />
+
+  <!-- High-Speed Interconnect Bus Lanes (PCIe / Memory Controller) -->
+  <path d="M 45 70 L 30 78 L 30 115 L 45 122" stroke="#475569" stroke-dasharray="2 2" />
+  <path d="M 195 70 L 210 78 L 210 115 L 195 122" stroke="#475569" stroke-dasharray="2 2" />
+  
+  <!-- Memory Channel Lines -->
+  <line x1="80" y1="125" x2="80" y2="155" stroke="#334155" />
+  <line x1="120" y1="130" x2="120" y2="165" stroke="#334155" />
+  <line x1="160" y1="125" x2="160" y2="155" stroke="#334155" />
+  <rect x="70" y="155" width="20" height="8" rx="1" />
+  <rect x="110" y="165" width="20" height="8" rx="1" />
+  <rect x="150" y="155" width="20" height="8" rx="1" />
+
+  <!-- Technical Spec Label Annotation -->
+  <text x="120" y="200" text-anchor="middle" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" font-weight="700" fill="#64748B" letter-spacing="1">L1/L2 CACHE DIE</text>
+  <line x1="60" y1="208" x2="180" y2="208" stroke="#94A3B8" stroke-dasharray="3 3" stroke-width="0.8" />
+</svg>

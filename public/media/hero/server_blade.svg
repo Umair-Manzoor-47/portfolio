@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 220" fill="none" stroke="#334155" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- 1U/2U High-Density Rackmount Server Blade (Isometric CAD View) -->
+  <!-- Top Lid Panel -->
+  <polygon points="120,20 225,65 125,115 20,70" fill="none" stroke="#1E293B" stroke-width="1.6" />
+
+  <!-- Front Bezel Face (Left-facing isometric) -->
+  <polygon points="20,70 125,115 125,155 20,110" fill="none" stroke="#1E293B" stroke-width="1.6" />
+
+  <!-- Side Chassis Panel (Right-facing isometric) -->
+  <polygon points="125,115 225,65 225,105 125,155" fill="none" stroke="#1E293B" stroke-width="1.6" />
+
+  <!-- Front Bezel: 8x NVMe Hot-Swap Drive Bays -->
+  <g transform="translate(30, 80)">
+    <!-- Drive Column 1 -->
+    <rect x="0" y="0" width="16" height="22" rx="1" stroke="#475569" stroke-width="1" />
+    <line x1="0" y1="7" x2="16" y2="7" stroke="#64748B" />
+    <circle cx="8" cy="15" r="1.5" fill="#334155" />
+
+    <!-- Drive Column 2 -->
+    <rect x="20" y="8" width="16" height="22" rx="1" stroke="#475569" stroke-width="1" />
+    <line x1="20" y1="15" x2="36" y2="15" stroke="#64748B" />
+    <circle cx="28" cy="23" r="1.5" fill="#334155" />
+
+    <!-- Drive Column 3 -->
+    <rect x="40" y="16" width="16" height="22" rx="1" stroke="#475569" stroke-width="1" />
+    <line x1="40" y1="23" x2="56" y2="23" stroke="#64748B" />
+    <circle cx="48" cy="31" r="1.5" fill="#334155" />
+
+    <!-- Drive Column 4 -->
+    <rect x="60" y="24" width="16" height="22" rx="1" stroke="#475569" stroke-width="1" />
+    <line x1="60" y1="31" x2="76" y2="31" stroke="#64748B" />
+    <circle cx="68" cy="39" r="1.5" fill="#334155" />
+  </g>
+
+  <!-- Top Interior Component Cutaways (Dual Sockets + Fan Wall) -->
+  <!-- Fan Wall Array -->
+  <line x1="55" y1="52" x2="160" y2="97" stroke="#64748B" stroke-dasharray="3 3" />
+  <circle cx="75" cy="62" r="5" stroke="#64748B" stroke-width="0.9" />
+  <circle cx="95" cy="71" r="5" stroke="#64748B" stroke-width="0.9" />
+  <circle cx="115" cy="80" r="5" stroke="#64748B" stroke-width="0.9" />
+  <circle cx="135" cy="89" r="5" stroke="#64748B" stroke-width="0.9" />
+
+  <!-- Dual Processor Heatsinks -->
+  <polygon points="105,42 125,51 115,57 95,48" stroke="#475569" stroke-width="1.2" />
+  <polygon points="135,55 155,64 145,70 125,61" stroke="#475569" stroke-width="1.2" />
+
+  <!-- High-Speed 100GbE QSFP Optical Uplink Ports -->
+  <rect x="150" y="125" width="22" height="12" rx="1" stroke="#0284C7" stroke-width="1.2" />
+  <line x1="161" y1="125" x2="161" y2="137" stroke="#0284C7" />
+  <rect x="180" y="112" width="22" height="12" rx="1" stroke="#0284C7" stroke-width="1.2" />
+  <line x1="191" y1="112" x2="191" y2="124" stroke="#0284C7" />
+
+  <!-- Technical Spec Label Annotation -->
+  <text x="120" y="195" text-anchor="middle" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" font-weight="700" fill="#64748B" letter-spacing="1">1U BACKEND NODE</text>
+  <line x1="60" y1="205" x2="180" y2="205" stroke="#94A3B8" stroke-dasharray="3 3" stroke-width="0.8" />
+</svg>

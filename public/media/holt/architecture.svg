@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 480" width="920" height="480" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="accentBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="accentEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="accentPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#6D28D9"/>
+    </linearGradient>
+    <linearGradient id="accentRose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E11D48"/>
+      <stop offset="100%" stop-color="#BE123C"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="920" height="480" rx="16" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2"/>
+
+  <!-- Top Title Bar -->
+  <rect x="24" y="24" width="872" height="64" rx="10" fill="url(#headerGrad)"/>
+  <text x="460" y="52" text-anchor="middle" fill="#F8FAFC" font-size="18" font-weight="700" letter-spacing="0.5">HOLT: Ultra-Low Latency HFT Matching Engine (C++20)</text>
+  <text x="460" y="73" text-anchor="middle" fill="#94A3B8" font-size="12">Deterministic Price-Time Priority Execution with Zero Dynamic Allocation Hot Paths</text>
+
+  <!-- 3 Main Pipeline Columns -->
+  <!-- 1. Order Ingress & Lock-Free Queue -->
+  <g transform="translate(24, 110)" filter="url(#shadow)">
+    <rect width="270" height="230" rx="10" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.5"/>
+    <rect width="270" height="38" rx="10" fill="url(#accentBlue)"/>
+    <rect y="28" width="270" height="10" fill="url(#accentBlue)"/>
+    <text x="135" y="24" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700">1. Order Ingress &amp; SPSC Queue</text>
+
+    <text x="16" y="64" fill="#1D4ED8" font-size="11" font-weight="700">LOCK-FREE RING BUFFER</text>
+    <text x="16" y="86" fill="#334155" font-size="12">• SPSCQueue&lt;T, N&gt; ring buffer</text>
+    <text x="16" y="106" fill="#334155" font-size="12">• alignas(128) false-sharing guard</text>
+    <text x="16" y="126" fill="#334155" font-size="12">• Bitwise power-of-two masking</text>
+    <text x="16" y="146" fill="#334155" font-size="12">• Acquire-release memory ordering</text>
+    <text x="16" y="166" fill="#334155" font-size="12">• Non-blocking thread isolation</text>
+
+    <rect x="16" y="186" width="238" height="28" rx="6" fill="#EFF6FF"/>
+    <text x="135" y="204" text-anchor="middle" fill="#1D4ED8" font-size="11" font-weight="600">Zero-Contention Ingress</text>
+  </g>
+
+  <!-- 2. Matching Engine & Order Book -->
+  <g transform="translate(325, 110)" filter="url(#shadow)">
+    <rect width="270" height="230" rx="10" fill="#FFFFFF" stroke="#DDD6FE" stroke-width="1.5"/>
+    <rect width="270" height="38" rx="10" fill="url(#accentPurple)"/>
+    <rect y="28" width="270" height="10" fill="url(#accentPurple)"/>
+    <text x="135" y="24" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700">2. Matching Core &amp; Book</text>
+
+    <text x="16" y="64" fill="#6D28D9" font-size="11" font-weight="700">CACHE-ALIGNED ORDER BOOK</text>
+    <text x="16" y="86" fill="#334155" font-size="12">• alignas(64) Order &amp; Level</text>
+    <text x="16" y="106" fill="#334155" font-size="12">• Intrusive doubly linked lists (O(1))</text>
+    <text x="16" y="126" fill="#334155" font-size="12">• Price-Time priority matching</text>
+    <text x="16" y="146" fill="#334155" font-size="12">• Limit, Market, IOC, FOK, Iceberg</text>
+    <text x="16" y="166" fill="#334155" font-size="12">• Fixed-point Price (PRICE_SCALE)</text>
+
+    <rect x="16" y="186" width="238" height="28" rx="6" fill="#F5F3FF"/>
+    <text x="135" y="204" text-anchor="middle" fill="#6D28D9" font-size="11" font-weight="600">O(1) Insert &amp; Cancel per Level</text>
+  </g>
+
+  <!-- 3. Pre-allocated Memory & Events -->
+  <g transform="translate(626, 110)" filter="url(#shadow)">
+    <rect width="270" height="230" rx="10" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="1.5"/>
+    <rect width="270" height="38" rx="10" fill="url(#accentEmerald)"/>
+    <rect y="28" width="270" height="10" fill="url(#accentEmerald)"/>
+    <text x="135" y="24" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700">3. Memory Pool &amp; Events</text>
+
+    <text x="16" y="64" fill="#047857" font-size="11" font-weight="700">ZERO-HEAP ALLOCATION</text>
+    <text x="16" y="86" fill="#334155" font-size="12">• MemoryPool&lt;T, N&gt; intrusive list</text>
+    <text x="16" y="106" fill="#334155" font-size="12">• std::pmr::monotonic_buffer</text>
+    <text x="16" y="126" fill="#334155" font-size="12">• Zero malloc/free in hot path</text>
+    <text x="16" y="146" fill="#334155" font-size="12">• Trivially copyable event union</text>
+    <text x="16" y="166" fill="#334155" font-size="12">• High-resolution nanosecond clock</text>
+
+    <rect x="16" y="186" width="238" height="28" rx="6" fill="#ECFDF5"/>
+    <text x="135" y="204" text-anchor="middle" fill="#059669" font-size="11" font-weight="600">Deterministic Nanosecond Latency</text>
+  </g>
+
+  <!-- Bottom Architecture Metrics Bar -->
+  <g transform="translate(24, 360)">
+    <rect width="872" height="96" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    
+    <g transform="translate(20, 16)">
+      <rect width="260" height="64" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="130" y="28" text-anchor="middle" fill="#0F172A" font-size="12" font-weight="700">Zero Dynamic Allocation</text>
+      <text x="130" y="48" text-anchor="middle" fill="#64748B" font-size="11">Pre-allocated memory pool &amp; PMR buffers</text>
+    </g>
+
+    <g transform="translate(306, 16)">
+      <rect width="260" height="64" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="130" y="28" text-anchor="middle" fill="#0F172A" font-size="12" font-weight="700">Hardware Cache Optimization</text>
+      <text x="130" y="48" text-anchor="middle" fill="#64748B" font-size="11">64B/128B alignment avoids false sharing</text>
+    </g>
+
+    <g transform="translate(592, 16)">
+      <rect width="260" height="64" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="130" y="28" text-anchor="middle" fill="#0F172A" font-size="12" font-weight="700">Strict Systems Discipline</text>
+      <text x="130" y="48" text-anchor="middle" fill="#64748B" font-size="11">-fno-exceptions, -Wall -Wextra -Wpedantic</text>
+    </g>
+  </g>
+</svg>

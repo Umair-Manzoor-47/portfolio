@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%" style="background:#0F172A; font-family:'JetBrains Mono', Consolas, sans-serif;">
+  <rect width="600" height="400" fill="#0B132B" />
+  <rect x="20" y="20" width="560" height="360" rx="8" fill="#131C31" stroke="#253550" stroke-width="1.2" />
+  
+  <text x="40" y="55" fill="#38BDF8" font-size="14" font-weight="700">CONTIGUOUS COLUMN ARRAYS :: ZERO POINTER CHASING</text>
+  <text x="40" y="75" fill="#64748B" font-size="11">Data-Oriented memory layout stores components in parallel vectors</text>
+
+  <!-- Traditional OOP vs DOD comparison -->
+  <g transform="translate(40, 100)">
+    <!-- Traditional OOP -->
+    <rect x="0" y="0" width="520" height="80" rx="6" fill="#1E293B" />
+    <text x="15" y="25" fill="#F43F5E" font-size="11" font-weight="700">TRADITIONAL OOP (CACHE MISS SPRAY)</text>
+    <text x="15" y="48" fill="#FDA4AF" font-size="11">Entity* -&gt; Heap Struct -&gt; vtable -&gt; ComponentPtr [Scattered Heap Pages]</text>
+    <text x="15" y="68" fill="#64748B" font-size="10">High L1/L2 cache miss rate, stalling CPU execution pipelines.</text>
+
+    <!-- DOD Archetype -->
+    <rect x="0" y="95" width="520" height="85" rx="6" fill="#0E1726" stroke="#059669" stroke-width="1.2" />
+    <text x="15" y="120" fill="#34D399" font-size="11" font-weight="700">ARCHETYPE DOD COLUMNS (HARDWARE STREAMING)</text>
+    <text x="15" y="145" fill="#6EE7B7" font-size="11">ComponentColumn&lt;Transform&gt; [T0, T1, T2, T3, T4, T5, ...]</text>
+    <text x="15" y="165" fill="#38BDF8" font-size="10">Linear memory reads saturate CPU cache bandwidth with 0 pipeline bubbles.</text>
+  </g>
+
+  <!-- Bottom Metric Callout -->
+  <rect x="40" y="315" width="520" height="45" rx="4" fill="#064E3B" stroke="#059669" stroke-width="1" />
+  <text x="55" y="342" fill="#6EE7B7" font-size="12" font-weight="700">100% HARDWARE PREFETCHER SATURATION :: SUB-MILLISECOND ITERATION</text>
+</svg>

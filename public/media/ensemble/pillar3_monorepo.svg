@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%" style="background:#0F172A; font-family:'JetBrains Mono', Consolas, sans-serif;">
+  <rect width="600" height="400" fill="#0B132B" />
+  <rect x="20" y="20" width="560" height="360" rx="8" fill="#131C31" stroke="#253550" stroke-width="1.2" />
+  
+  <text x="40" y="55" fill="#38BDF8" font-size="14" font-weight="700">MELOS MONOREPO ARCHITECTURE</text>
+  <text x="40" y="75" fill="#64748B" font-size="11">Modular package boundary isolation for enterprise client development</text>
+
+  <!-- Package Tree -->
+  <g transform="translate(40, 100)">
+    <rect x="0" y="0" width="520" height="85" rx="6" fill="#1E293B" stroke="#334155" />
+    
+    <rect x="15" y="15" width="115" height="55" rx="4" fill="#0284C7" />
+    <text x="25" y="40" fill="#FFFFFF" font-size="10" font-weight="700">ensemble_core</text>
+    <text x="25" y="55" fill="#BAE6FD" font-size="9">Runtime &amp; Parser</text>
+
+    <rect x="140" y="15" width="115" height="55" rx="4" fill="#6366F1" />
+    <text x="150" y="40" fill="#FFFFFF" font-size="10" font-weight="700">ensemble_auth</text>
+    <text x="150" y="55" fill="#C7D2FE" font-size="9">Tokens &amp; Sessions</text>
+
+    <rect x="265" y="15" width="115" height="55" rx="4" fill="#8B5CF6" />
+    <text x="275" y="40" fill="#FFFFFF" font-size="10" font-weight="700">ensemble_connect</text>
+    <text x="275" y="55" fill="#DDD6FE" font-size="9">REST / Sockets</text>
+
+    <rect x="390" y="15" width="115" height="55" rx="4" fill="#059669" />
+    <text x="400" y="40" fill="#FFFFFF" font-size="10" font-weight="700">starter_apps</text>
+    <text x="400" y="55" fill="#A7F3D0" font-size="9">Client Templates</text>
+  </g>
+
+  <!-- Explanation -->
+  <g transform="translate(40, 205)">
+    <rect x="0" y="0" width="520" height="90" rx="6" fill="#0E1726" stroke="#1E2B40" stroke-width="1" />
+    <text x="15" y="25" fill="#94A3B8" font-size="11" font-weight="700">ISOLATED DEPLOYMENTS &amp; VERSIONING</text>
+    <text x="15" y="50" fill="#38BDF8" font-size="12" font-weight="700">melos bootstrap &amp;&amp; melos exec -- flutter test</text>
+    <text x="15" y="70" fill="#64748B" font-size="11">Standardized multi-package version control and automated release workflows.</text>
+  </g>
+
+  <!-- Bottom Metric Callout -->
+  <rect x="40" y="315" width="520" height="45" rx="4" fill="#0F172A" stroke="#334155" stroke-width="1" />
+  <text x="55" y="342" fill="#A7F3D0" font-size="12" font-weight="700">HIGH-SCALE MONOREPO CODEBASE :: PRODUCTION QUALITY TEST SUITE</text>
+</svg>

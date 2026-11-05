@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="100%" height="100%" style="background:#090E17; font-family:'JetBrains Mono', Consolas, sans-serif;">
+  <!-- Window Header -->
+  <rect x="30" y="25" width="1140" height="50" rx="8" fill="#111B2C" stroke="#22334B" stroke-width="1.2" />
+  <circle cx="55" cy="50" r="6" fill="#EF4444" />
+  <circle cx="75" cy="50" r="6" fill="#F59E0B" />
+  <circle cx="95" cy="50" r="6" fill="#10B981" />
+  <text x="125" y="55" fill="#94A3B8" font-size="13" font-weight="600" letter-spacing="1">ENSEMBLE DECLARATIVE RUNTIME :: FLUTTER &amp; WEB CLIENT ENGINE</text>
+
+  <rect x="910" y="38" width="240" height="24" rx="4" fill="#0284C7" />
+  <text x="925" y="54" fill="#FFFFFF" font-size="11" font-weight="700">SUB-SECOND CLIENT HOT RELOAD</text>
+
+  <!-- Left Side: Declarative Definition & Pipeline -->
+  <rect x="30" y="90" width="600" height="565" rx="10" fill="#0D1522" stroke="#1D2A3B" stroke-width="1.2" />
+  <text x="55" y="125" fill="#F8FAFC" font-size="16" font-weight="700">DECLARATIVE SCHEMA PARSER</text>
+  <text x="55" y="145" fill="#64748B" font-size="11">Remote YAML/JSON definition dynamically mapped into native Flutter tree</text>
+
+  <!-- Code Editor Window -->
+  <g transform="translate(55, 165)">
+    <rect x="0" y="0" width="550" height="260" rx="6" fill="#070A12" stroke="#192435" />
+    <text x="20" y="30" fill="#64748B" font-size="12">View:</text>
+    <text x="40" y="55" fill="#38BDF8" font-size="12">header:</text>
+    <text x="60" y="80" fill="#FBBF24" font-size="12">title: "Live Cloud Feed"</text>
+    <text x="40" y="105" fill="#38BDF8" font-size="12">body:</text>
+    <text x="60" y="130" fill="#A7F3D0" font-size="12">ListView:</text>
+    <text x="80" y="155" fill="#F43F5E" font-size="12">item-template:</text>
+    <text x="100" y="180" fill="#E2E8F0" font-size="12">data: "${fetchMediaFeed.data}"</text>
+    <text x="100" y="205" fill="#E2E8F0" font-size="12">name: "feedItem"</text>
+    <text x="100" y="230" fill="#38BDF8" font-size="12">template: CustomCardWidget(feedItem)</text>
+  </g>
+
+  <!-- Runtime Optimizer Notes -->
+  <g transform="translate(55, 445)">
+    <rect x="0" y="0" width="550" height="185" rx="6" fill="#10192A" stroke="#213048" />
+    <text x="20" y="30" fill="#F8FAFC" font-size="13" font-weight="700">CONTRIBUTION FOCUS &amp; ENGINE HIGHLIGHTS</text>
+    <text x="20" y="60" fill="#34D399" font-size="12 font-weight-700">✓ +2% Widget Rendering Speedup</text>
+    <text x="20" y="85" fill="#94A3B8" font-size="11">Optimized draw call overhead &amp; asynchronous backend-to-widget loading.</text>
+    <text x="20" y="115" fill="#38BDF8" font-size="12 font-weight-700">✓ Production Reference Templates</text>
+    <text x="20" y="140" fill="#94A3B8" font-size="11">Engineered modular multi-tier application architectures shipped globally.</text>
+    <text x="20" y="165" fill="#FBBF24" font-size="11">Monorepo managed with Melos across Flutter iOS, Android &amp; Web runtimes.</text>
+  </g>
+
+  <!-- Right Side: Device Frame Visualization -->
+  <rect x="650" y="90" width="520" height="565" rx="10" fill="#0D1522" stroke="#1D2A3B" stroke-width="1.2" />
+  <text x="680" y="125" fill="#F8FAFC" font-size="16" font-weight="700">DYNAMIC RUNTIME CLIENT</text>
+  <text x="680" y="145" fill="#64748B" font-size="11">Instantly rendered native components with reactive data bindings</text>
+
+  <!-- Phone Mockup Frame -->
+  <g transform="translate(730, 170)">
+    <rect x="0" y="0" width="360" height="460" rx="36" fill="#131B2A" stroke="#25354F" stroke-width="3" />
+    <!-- Dynamic notch -->
+    <rect x="110" y="12" width="140" height="20" rx="10" fill="#070A12" />
+    
+    <!-- Phone Screen Content -->
+    <rect x="15" y="45" width="330" height="395" rx="22" fill="#0B111C" />
+    
+    <!-- App Bar -->
+    <rect x="25" y="60" width="310" height="40" rx="8" fill="#172236" />
+    <text x="40" y="85" fill="#F8FAFC" font-size="13" font-weight="700">Ensemble Explorer</text>
+    <circle cx="310" cy="80" r="5" fill="#10B981" />
+
+    <!-- Card 1 -->
+    <rect x="25" y="115" width="310" height="90" rx="10" fill="#172236" stroke="#25354F" stroke-width="1" />
+    <rect x="38" y="128" width="60" height="64" rx="6" fill="#0284C7" />
+    <text x="110" y="148" fill="#FFFFFF" font-size="12" font-weight="700">High-Throughput Feed</text>
+    <text x="110" y="170" fill="#94A3B8" font-size="10">Sub-second reactive state</text>
+    <text x="110" y="188" fill="#34D399" font-size="10" font-weight="700">+2% Render Optimized</text>
+
+    <!-- Card 2 -->
+    <rect x="25" y="220" width="310" height="90" rx="10" fill="#172236" stroke="#25354F" stroke-width="1" />
+    <rect x="38" y="233" width="60" height="64" rx="6" fill="#7C3AED" />
+    <text x="110" y="253" fill="#FFFFFF" font-size="12" font-weight="700">Declarative Components</text>
+    <text x="110" y="275" fill="#94A3B8" font-size="10">Zero App Store update cycle</text>
+    <text x="110" y="293" fill="#38BDF8" font-size="10" font-weight="700">Cross-Platform Flutter</text>
+
+    <!-- Card 3 -->
+    <rect x="25" y="325" width="310" height="90" rx="10" fill="#172236" stroke="#25354F" stroke-width="1" />
+    <rect x="38" y="338" width="60" height="64" rx="6" fill="#059669" />
+    <text x="110" y="358" fill="#FFFFFF" font-size="12" font-weight="700">Melos Modular Packages</text>
+    <text x="110" y="380" fill="#94A3B8" font-size="10">Clean decoupled architecture</text>
+    <text x="110" y="398" fill="#FBBF24" font-size="10" font-weight="700">Auth / Connect / Camera</text>
+  </g>
+</svg>

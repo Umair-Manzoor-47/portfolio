@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="100%" height="100%" style="background:#090E1A; font-family:'JetBrains Mono', Consolas, sans-serif;">
+  <!-- Window Header -->
+  <rect x="30" y="25" width="1140" height="50" rx="8" fill="#111B2E" stroke="#22334F" stroke-width="1.2" />
+  <circle cx="55" cy="50" r="6" fill="#EF4444" />
+  <circle cx="75" cy="50" r="6" fill="#F59E0B" />
+  <circle cx="95" cy="50" r="6" fill="#10B981" />
+  <text x="125" y="55" fill="#94A3B8" font-size="13" font-weight="600" letter-spacing="1">C++20 ARCHETYPE ECS RUNTIME :: DATA-ORIENTED BENCHMARK [100,000 ENTITIES]</text>
+
+  <rect x="940" y="38" width="210" height="24" rx="4" fill="#064E3B" />
+  <text x="955" y="54" fill="#34D399" font-size="11" font-weight="700">60 FPS DETERMINISTIC (16.6ms)</text>
+
+  <!-- Left Main Memory Canvas: Archetype Column Layout -->
+  <rect x="30" y="90" width="760" height="565" rx="10" fill="#0D1524" stroke="#1D2A40" stroke-width="1.2" />
+  <text x="55" y="125" fill="#F8FAFC" font-size="16" font-weight="700">ARCHETYPE [Position, Velocity, MeshRender] MEMORY COLUMNS</text>
+  <text x="55" y="145" fill="#64748B" font-size="11">Contiguous parallel array columns maximize CPU L1/L2 hardware prefetcher</text>
+
+  <!-- Parallel Memory Columns -->
+  <g transform="translate(55, 170)">
+    <!-- Column 1: Entity IDs -->
+    <rect x="0" y="0" width="130" height="32" rx="4" fill="#1E293B" />
+    <text x="15" y="21" fill="#94A3B8" font-size="11" font-weight="700">EntityID Column</text>
+    <rect x="0" y="38" width="130" height="300" rx="4" fill="#0A0F1D" stroke="#1E293B" />
+    <text x="15" y="65" fill="#E2E8F0" font-size="11">#00001</text>
+    <text x="15" y="95" fill="#E2E8F0" font-size="11">#00002</text>
+    <text x="15" y="125" fill="#E2E8F0" font-size="11">#00003</text>
+    <text x="15" y="155" fill="#E2E8F0" font-size="11">#00004</text>
+    <text x="15" y="185" fill="#E2E8F0" font-size="11">#00005</text>
+    <text x="15" y="215" fill="#E2E8F0" font-size="11">#00006</text>
+    <text x="15" y="245" fill="#64748B" font-size="11">... [100K]</text>
+
+    <!-- Column 2: Position (x, y, z) -->
+    <rect x="145" y="0" width="180" height="32" rx="4" fill="#0284C7" />
+    <text x="160" y="21" fill="#FFFFFF" font-size="11" font-weight="700">Position (float x, y, z)</text>
+    <rect x="145" y="38" width="180" height="300" rx="4" fill="#0A0F1D" stroke="#0284C7" stroke-opacity="0.4" />
+    <text x="160" y="65" fill="#38BDF8" font-size="11">{ 12.4, 0.0, 4.2 }</text>
+    <text x="160" y="95" fill="#38BDF8" font-size="11">{ 14.1, 1.2, 5.0 }</text>
+    <text x="160" y="125" fill="#38BDF8" font-size="11">{ 18.9, 0.5, 3.8 }</text>
+    <text x="160" y="155" fill="#38BDF8" font-size="11">{ 22.0, 2.1, 7.4 }</text>
+    <text x="160" y="185" fill="#38BDF8" font-size="11">{ 25.8, 0.0, 9.1 }</text>
+    <text x="160" y="215" fill="#38BDF8" font-size="11">{ 28.3, 1.8, 6.5 }</text>
+    <text x="160" y="245" fill="#64748B" font-size="11">... [PACKED ARRAY]</text>
+
+    <!-- Column 3: Velocity (vx, vy, vz) -->
+    <rect x="340" y="0" width="180" height="32" rx="4" fill="#059669" />
+    <text x="355" y="21" fill="#FFFFFF" font-size="11" font-weight="700">Velocity (float vx, vy)</text>
+    <rect x="340" y="38" width="180" height="300" rx="4" fill="#0A0F1D" stroke="#059669" stroke-opacity="0.4" />
+    <text x="355" y="65" fill="#34D399" font-size="11">{ +1.2, -0.4, 0.0 }</text>
+    <text x="355" y="95" fill="#34D399" font-size="11">{ +0.8, +0.1, 0.0 }</text>
+    <text x="355" y="125" fill="#34D399" font-size="11">{ -1.5, +0.9, 0.0 }</text>
+    <text x="355" y="155" fill="#34D399" font-size="11">{ +2.1, +0.0, 0.0 }</text>
+    <text x="355" y="185" fill="#34D399" font-size="11">{ -0.4, -0.7, 0.0 }</text>
+    <text x="355" y="215" fill="#34D399" font-size="11">{ +1.9, +0.3, 0.0 }</text>
+    <text x="355" y="245" fill="#64748B" font-size="11">... [PACKED ARRAY]</text>
+
+    <!-- Column 4: MeshRender ID -->
+    <rect x="535" y="0" width="165" height="32" rx="4" fill="#7C3AED" />
+    <text x="550" y="21" fill="#FFFFFF" font-size="11" font-weight="700">MeshRender Handle</text>
+    <rect x="535" y="38" width="165" height="300" rx="4" fill="#0A0F1D" stroke="#7C3AED" stroke-opacity="0.4" />
+    <text x="550" y="65" fill="#C4B5FD" font-size="11">Handle(0x01)</text>
+    <text x="550" y="95" fill="#C4B5FD" font-size="11">Handle(0x02)</text>
+    <text x="550" y="125" fill="#C4B5FD" font-size="11">Handle(0x01)</text>
+    <text x="550" y="155" fill="#C4B5FD" font-size="11">Handle(0x04)</text>
+    <text x="550" y="185" fill="#C4B5FD" font-size="11">Handle(0x02)</text>
+    <text x="550" y="215" fill="#C4B5FD" font-size="11">Handle(0x03)</text>
+    <text x="550" y="245" fill="#64748B" font-size="11">... [PACKED ARRAY]</text>
+
+    <!-- Cacheline arrow note -->
+    <g transform="translate(0, 360)">
+      <rect x="0" y="0" width="700" height="60" rx="6" fill="#090E1A" stroke="#1E293B" />
+      <text x="15" y="25" fill="#38BDF8" font-size="12" font-weight="700">CPU L1 CACHELINE BURST: ZERO POINTER DEREFERENCING</text>
+      <text x="15" y="47" fill="#64748B" font-size="11">MovementSystem streams contiguous bytes directly into vector registers (AVX/SIMD).</text>
+    </g>
+  </g>
+
+  <!-- Right Panel: Telemetry & Benchmark Metrics -->
+  <rect x="810" y="90" width="360" height="565" rx="10" fill="#0D1524" stroke="#1D2A40" stroke-width="1.2" />
+  <text x="835" y="125" fill="#F8FAFC" font-size="16" font-weight="700">SYSTEM QUERY METRICS</text>
+
+  <!-- Metric 1 -->
+  <g transform="translate(835, 160)">
+    <rect x="0" y="0" width="310" height="85" rx="8" fill="#131F37" stroke="#253554" />
+    <text x="15" y="25" fill="#94A3B8" font-size="11" font-weight="600">ITERATION SPEED</text>
+    <text x="15" y="55" fill="#34D399" font-size="22" font-weight="800">1.82 ms</text>
+    <text x="15" y="73" fill="#64748B" font-size="10">per 100,000 entities position update</text>
+  </g>
+
+  <!-- Metric 2 -->
+  <g transform="translate(835, 260)">
+    <rect x="0" y="0" width="310" height="85" rx="8" fill="#131F37" stroke="#253554" />
+    <text x="15" y="25" fill="#94A3B8" font-size="11" font-weight="600">ENTITY DESTRUCTION</text>
+    <text x="15" y="55" fill="#38BDF8" font-size="22" font-weight="800">O(1) Swap &amp; Pop</text>
+    <text x="15" y="73" fill="#64748B" font-size="10">tail moved to vacancy; zero array shift</text>
+  </g>
+
+  <!-- Metric 3 -->
+  <g transform="translate(835, 360)">
+    <rect x="0" y="0" width="310" height="85" rx="8" fill="#131F37" stroke="#253554" />
+    <text x="15" y="25" fill="#94A3B8" font-size="11" font-weight="600">COMPONENT LOOKUP</text>
+    <text x="15" y="55" fill="#F59E0B" font-size="22" font-weight="800">Compile-Time ID</text>
+    <text x="15" y="73" fill="#64748B" font-size="10">zero runtime string or typeid hash</text>
+  </g>
+
+  <!-- Architecture summary -->
+  <g transform="translate(835, 460)">
+    <rect x="0" y="0" width="310" height="170" rx="8" fill="#131F37" stroke="#253554" />
+    <text x="15" y="25" fill="#E2E8F0" font-size="12" font-weight="700">CORE SYSTEM ARCHITECTURE</text>
+    <text x="15" y="55" fill="#64748B" font-size="11">• World &amp; EntityRegistry</text>
+    <text x="15" y="80" fill="#64748B" font-size="11">• ArchetypeRegistry graph</text>
+    <text x="15" y="105" fill="#64748B" font-size="11">• ComponentColumn type erasure</text>
+    <text x="15" y="130" fill="#34D399" font-size="11">• Zero external dependencies</text>
+  </g>
+</svg>
